@@ -1,0 +1,11 @@
+.btn-dec{
+    color: #121416;
+    border-radius: 5px;
+    text-decoration: none !important;
+
+}
+
+.btn-dec:hover{
+    background-color:#3E007C;
+    color: white;
+}

@@ -1,0 +1,1 @@
+const TOGGLE_T = "STORE_NAVBAR_ATTIVE"
