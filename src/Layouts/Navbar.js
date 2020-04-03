@@ -8,6 +8,7 @@ import './../assets/css/style.css'
 
 
 
+
 function Navbar() {
   return (
     <header class="header">
@@ -213,7 +214,7 @@ function Navbar() {
 										<ul class="list-group list-group-horizontal-md mr-auto">
 											<li class="mr-1 active"><a href="/" class="btn-ctm-space text-white"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Dashboard</span></a></li>
 											<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Employees</span></a></li>
-											<li class="mr-1"><a class="btn-ctm-space btn-dec " href="#"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Department</span></a></li>
+											<li class="mr-1"><a class="btn-ctm-space btn-dec "href="/department"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Department</span></a></li>
 											<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
 											<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/leave"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave</span></a></li>
 											<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-star pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Reviews</span></a></li>

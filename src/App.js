@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Navabar from './Layouts/Navbar'
 import Dashboard from './Pages/Dashboard'
 import Leave from './Pages/Leave'
+import Department from './Pages/Department'
+
 
 
 class App extends Component{
   render(){
   return (
-    <BrowserRouter>
+    <Router>
     <div class="inner-wrapper">
 		<div id="loader-wrapper">
 			
@@ -26,12 +28,11 @@ class App extends Component{
     <Switch>
       <Route exact path ="/" component = {Dashboard}/>
       <Route exact path = "/leave" component = {Leave}/>
-{/* <Dashboard/>
-<Leave/> */}
+      <Route exact path= "/department" component={Department}/>  
     </Switch>
     </div>
     <div class="sidebar-overlay" id="sidebar_overlay"></div>
-    </BrowserRouter>
+    </Router>
     
   );
 }
