@@ -4,8 +4,67 @@
     text-decoration: none !important;
 
 }
-
 .btn-dec:hover{
     background-color:#3E007C;
+    color: white;
+}
+
+/* .emp-name{
+    text-decoration: none !important;
+    font-size: 22px;
+    color: #3E007C;
+    font-weight: 400;
+}
+
+.emp-name:hover{
+    color: #FFAB00;
+}
+*/
+.apply-leave{
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.apply-leave:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.cancel-leave{
+    background-color: #C82333;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.cancel-leave:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.calen-btn{
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.calen-btn:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.star-rating{
+    color: orange;
+}
+.bold-let{
+    font-weight: 500;
+}
+.dark-yellow{
+    color: #E8910D;
+}
+.reject-leave-btn{
+    background-color: #C82333;
+    border-radius: 5px;
+    text-decoration: none !important; 
+}
+.reject-leave-btn:hover{
+    background-color:#C82333;
     color: white;
 }

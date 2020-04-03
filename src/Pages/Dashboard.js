@@ -2,7 +2,11 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
+import './../assets/css/style.css'
+
 import manager_img from './../assets/images/manager/manager.png'
+import tiger from './../assets/images/Employees/Leave_Employees/tiger.png' 
+import hritik from './../assets/images/Employees/Leave_Employees/hritik.png'
 
 function Dashboard() {
 	return (
@@ -34,11 +38,23 @@ function Dashboard() {
 										<img src={manager_img} alt="User Avatar" class="img-fluid rounded-circle" width="100" />
 									</div>
 									<div class="user-details">
-										<h4><b>Welcome Manager</b></h4>
+										<h4><b>Welcome Mr. Raveen</b></h4>
 										<p>Sun, 29 Nov 2019</p>
 									</div>
 								</div>
 							</div>
+							<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {tiger} alt="image" class="img-fluid"/></span>
+										<span class="ml-4">Tiger shroff is working from home today.</span>
+									</div>
+								</div>
+								<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {hritik} alt="image" class="img-fluid"/></span>
+										<span class="ml-4">Hritik Roshan is away today.</span>
+									</div>
+								</div>
 						</aside>
 					</div>
 
@@ -113,10 +129,10 @@ function Dashboard() {
 										<table class="table table-bordered">
 											<thead>
 												<tr>
-													<th width="5%" scope="col">No</th>
-													<th width="20%" scope="col">Employee Name</th>
-													<th width="13%" scope="col">Leave Type</th>
-													<th width="17%" scope="col">From-To</th>
+													<th width = "5%" scope = "col">No</th>
+													<th width = "20%" scope = "col">Employee Name</th>
+													<th width = "13%" scope = "col">Leave Type</th>
+													<th width = "17%" scope = "col">From-To</th>
 													<th width="8%" scope="col">Status</th>
 													<th width="7%" scope="col">Action</th>
 												</tr>
@@ -127,9 +143,9 @@ function Dashboard() {
 													<td>Ravi Lavanjan</td>
 													<td>Casual Leave</td>
 													<td>2020.04.03 - 2020.04.05</td>
-													<td>Approved</td>
+													<td className = "text-info">Requested</td>
 													<td className="text-center">
-														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
+														<a href = "/leave_action" class="btn text-white btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</a>
 													</td>
 												</tr>
 												<tr>
@@ -137,7 +153,7 @@ function Dashboard() {
 													<td>Linges Sivapiriyan</td>
 													<td>Sick Leave</td>
 													<td>2020.04.06 - 2020.04.08</td>
-													<td>Approved</td>
+													<td className = "text-info">Requested</td>
 													<td className="text-center">
 														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
 													</td>
@@ -147,7 +163,7 @@ function Dashboard() {
 													<td>Jeya Sathurya</td>
 													<td>Half Day</td>
 													<td>2020.04.08</td>
-													<td>Waiting</td>
+													<td className = "text-info">Requested</td>
 													<td className="text-center">
 														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
 													</td>
@@ -157,7 +173,7 @@ function Dashboard() {
 													<td>Sinthu Wamsan</td>
 													<td>Sick Leave</td>
 													<td>2020.04.08 - 2020.04.09</td>
-													<td>Approved</td>
+													<td className = "text-info">Requested</td>
 													<td className="text-center">
 														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
 													</td>

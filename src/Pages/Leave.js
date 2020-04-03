@@ -1,6 +1,9 @@
 import React from 'react'
 
-import manager_img from './../assets/images/manager/manager.png' 
+import tiger from './../assets/images/Employees/Leave_Employees/tiger.png' 
+import hritik from './../assets/images/Employees/Leave_Employees/hritik.png'
+
+import './../assets/css/style.css'
 
 function Leave() {
   return (
@@ -24,6 +27,18 @@ function Leave() {
 												</div>
 											</div>
 										</div>
+									</div>
+								</div>
+								<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {tiger} alt="image" class="img-fluid"/></span>
+										<span class="ml-4">Tiger shroff is working from home today.</span>
+									</div>
+								</div>
+								<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {hritik} alt="image" class="img-fluid"/></span>
+										<span class="ml-4">Hritik Roshan is away today.</span>
 									</div>
 								</div>
 								
@@ -89,8 +104,8 @@ function Leave() {
 													</div>
 												</div>
 												<div class="text-center">
-													<a href="javascript:void(0);" class="btn btn-theme button-1 text-white ctm-border-radius mt-4">Apply</a>
-													<a href="javascript:void(0);" class="btn btn-danger text-white ctm-border-radius mt-4">Cancel</a>
+													<a href="" class="btn btn-theme apply-leave text-white ctm-border-radius mt-4 mr-5">Apply</a>
+													<a href="" class="btn cancel-leave text-white ctm-border-radius mt-4">Cancel</a>
 												</div>
 											</form>
 										</div>
