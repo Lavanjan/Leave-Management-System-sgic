@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import Add_New_Staff_Form from './../forms/Add_New_Staff_form'
 
-export default function HR_Table() {
+export default function Accounts_Table() {
     return (
         <Fragment>
         <div class="card ctm-border-radius shadow-sm flex-fill">
         <div class="card-header">
-            <h4 class="card-title mb-0">Human Resoures Department</h4>
+            <h4 class="card-title mb-0">Accounts Department</h4>
         </div>
         <div class="card-body">
         <div class="form-group float-left">
@@ -34,9 +34,9 @@ export default function HR_Table() {
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Abiramy Silambarasan</td>
-                        <td>SGIC/HR/001</td>
-                        <td>HR Director</td>
+                        <td>Viki Kuruparan</td>
+                        <td>SGIC/AC/001</td>
+                        <td>Chief Financial Officer</td>
                         <td><span class="badge badge-success">On Work</span></td>
                         <td className="text-center">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
@@ -44,9 +44,9 @@ export default function HR_Table() {
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Ullakurunathan Piriyanka</td>
-                        <td>SGIC/HR/002</td>
-                        <td>Chief Human Resource Officer</td>
+                        <td>Sunthar Umakanthan</td>
+                        <td>SGIC/AC/002</td>
+                        <td>Financial Controller</td>
                         <td><span class="badge badge-danger">On Leave</span></td>
                         <td className="text-center">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
@@ -54,9 +54,9 @@ export default function HR_Table() {
                     </tr>
                     <tr>
                         <th scope="row">3</th>
-                        <td>Madona Sebastian</td>
-                        <td>SGIC/HR/003</td>
-                        <td>General HR Manager</td>
+                        <td>Kirushna Ajith</td>
+                        <td>SGIC/AC/003</td>
+                        <td>Accounting Manager</td>
                         <td><span class="badge badge-success">On Work</span></td>
                         <td className="text-center">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
@@ -64,9 +64,9 @@ export default function HR_Table() {
                     </tr>
                     <tr>
                         <th scope="row">4</th>
-                        <td>Mahgesh Babu</td>
-                        <td>SGIC/HR/004</td>
-                        <td>Senior  Executive HR</td>
+                        <td>Logesh Ragul </td>
+                        <td>SGIC/AC/004</td>
+                        <td>Accountant</td>
                         <td><span class="badge badge-success">On Work</span></td>
                         <td className="text-center">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
@@ -74,9 +74,9 @@ export default function HR_Table() {
                     </tr>
                     <tr>
                     <th scope="row">5</th>
-                        <td>Shane Watson</td>
-                        <td>SGIC/HR/005</td>
-                        <td>HR Administrator</td>
+                        <td>Suresh Raina</td>
+                        <td>SGIC/AC/005</td>
+                        <td>Accounting Clerk</td>
                         <td><span class="badge badge-success">On Work</span></td>
                         <td className="text-center">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
@@ -84,9 +84,9 @@ export default function HR_Table() {
                     </tr>
                     <tr>
                     <th scope="row">6</th>
-                        <td>Aron Finch</td>
-                        <td>SGIC/HR/006</td>
-                        <td>Associate Executive HR</td>
+                        <td>Hatrik Pandiya</td>
+                        <td>SGIC/AC/006</td>
+                        <td>File Clerk</td>
                         <td><span class="badge badge-danger">On Leave</span></td>
                         <td className="text-center">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>

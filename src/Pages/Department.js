@@ -2,10 +2,11 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import manager_img from './../assets/images/manager/manager.png'
-import Accounting_Table from './../assets/tables/Accounting_Table'
+import Accounts_Table from '../assets/tables/Accounts_Table'
 import Development_Table from './../assets/tables/Development_Table'
 import HR_Table from './../assets/tables/HR_Table'
 import QA_Table from './../assets/tables/QA_Tables'
+import All_table from './../assets/tables/All_Table'
 
 
 function Department() {
@@ -36,13 +37,75 @@ function Department() {
 								</div>
 								<div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
 									<div class="user-info card-body">
-										<div class="user-avatar mb-4">
-											<img src={manager_img} alt="User Avatar" class="img-fluid rounded-circle" width="100" />
-										</div>
-										<div class="user-details">
-											<h4><b>Welcome Manager</b></h4>
-											<p>Sun, 29 Nov 2019</p>
-										</div>
+										<p class="font-weight-bold float-center">Departments Leaves</p>
+										<table class="table table-sm table-striped">
+											<thead class="thead-dark">
+												<tr>
+													<th scope="col" >
+														Departments
+                                                                </th>
+													<th scope="col">
+														Staffs
+                                                                </th>
+													<th scope="col">
+														Leave
+                                                                </th>
+
+												</tr>
+											</thead>
+											<tbody>
+
+												<tr>
+													<td>
+														Development
+                                                                </td>
+													<td>
+														<span class="badge badge-secondary">112</span>
+													</td>
+													<td>
+														<span class="badge badge-danger">4</span>
+													</td>
+
+
+												</tr>
+												<tr>
+													<td>
+														Quality Assurance
+                                                                </td>
+													<td>
+														<span class="badge badge-secondary">40</span>
+													</td>
+													<td>
+														<span class="badge badge-danger">8</span>
+													</td>
+
+												</tr>
+												<tr>
+													<td>
+														Accounts
+                                                                </td>
+													<td>
+														<span class="badge badge-secondary">10</span>
+													</td>
+													<td>
+														<span class="badge badge-danger">3</span>
+													</td>
+
+												</tr>
+												<tr>
+													<td>
+														Human Resources
+                                                                </td>
+													<td>
+														<span class="badge badge-secondary">20</span>
+													</td>
+													<td>
+														<span class="badge badge-danger">4</span>
+													</td>
+
+												</tr>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</aside>
@@ -59,7 +122,7 @@ function Department() {
 													<i class="fa fa-laptop-code" aria-hidden="true"></i>
 												</div>
 												<div class="card-right">
-													<h4 class="card-title">Development</h4>
+													<h4 class="card-title font-weight-bold">Development</h4>
 												</div>
 											</div>
 										</Link>
@@ -73,7 +136,7 @@ function Department() {
 													<i class="fa fa-stethoscope" aria-hidden="true"></i>
 												</div>
 												<div class="card-right">
-													<h4 class="card-title">QA</h4>
+													<h4 class="card-title font-weight-bold">QA</h4>
 												</div>
 											</div>
 										</Link>
@@ -82,13 +145,13 @@ function Department() {
 								</div>
 								<div class="col-xl-3 col-lg-6 col-sm-6 col-12">
 									<div class="card dash-widget ctm-border-radius shadow-sm">
-										<Link to={`${url}/accounting_table`}>
+										<Link to={`${url}/accounts_table`}>
 											<div class="card-body">
 												<div className="card-icon bg-danger">
 													<i class="fa fa-chart-line" aria-hidden="true"></i>
 												</div>
 												<div class="card-right">
-													<h4 class="card-title">Accounts</h4>
+													<h4 class="card-title font-weight-bold">Accounts</h4>
 												</div>
 											</div>
 										</Link>
@@ -103,7 +166,7 @@ function Department() {
 													<i class="fa fa-users" aria-hidden="true"></i>
 												</div>
 												<div class="card-right">
-													<h4 class="card-title">HR</h4>
+													<h4 class="card-title font-weight-bold">HR</h4>
 												</div>
 											</div>
 										</Link>
@@ -117,7 +180,7 @@ function Department() {
 								<div class="col-md-6 col-xl-12 col-lg-6 d-flex">
 									<Switch>
 										<Route exact path={path}>
-											<h3>Please select a topic.</h3>
+											<All_table />
 										</Route>
 										<Route path={`${path}/development_table`}>
 											<Development_Table />
@@ -128,8 +191,8 @@ function Department() {
 										<Route path={`${path}/hr_table`}>
 											<HR_Table />
 										</Route>
-										<Route path={`${path}/accounting_table`}>
-											<Accounting_Table />
+										<Route path={`${path}/accounts_table`}>
+											<Accounts_Table />
 										</Route>
 									</Switch>
 								</div>
