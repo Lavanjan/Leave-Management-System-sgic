@@ -4,8 +4,174 @@
     text-decoration: none !important;
 
 }
-
 .btn-dec:hover{
     background-color:#3E007C;
     color: white;
 }
+
+/* .emp-name{
+    text-decoration: none !important;
+    font-size: 22px;
+    color: #3E007C;
+    font-weight: 400;
+}
+
+.emp-name:hover{
+    color: #FFAB00;
+}
+*/
+.apply-leave{
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.apply-leave:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.cancel-leave{
+    background-color: #C82333;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.cancel-leave:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.calen-btn{
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.calen-btn:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.star-rating{
+    color: orange;
+}
+.bold-let{
+    font-weight: 500;
+}
+.dark-yellow{
+    color: #E8910D;
+}
+.reject-leave-btn{
+    background-color: #C82333;
+    border-radius: 5px;
+    text-decoration: none !important; 
+}
+.reject-leave-btn:hover{
+    background-color:#C82333;
+    color: white;
+}
+.apply-leave-btn{
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+}
+.his-change-btn{
+    background-color: #3E007C;
+    /* border-radius: 5px; */
+    /* text-decoration: none !important;  */
+}
+
+/* .nav-pills .active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #3e007c;
+	border-radius: 10px;
+}
+.nav-pills .nav-link {
+    color: #3e007c;
+} */
+
+.his-pills .his-link.active, .his-pills .show > .his-link {
+    color: white;
+    background-color: #3E007C;
+    border-radius: 10px;
+    text-decoration: none !important;
+}
+.his-pills .his-link{
+    color: #3E007C;
+    text-decoration: none !important;
+}
+.cus-badge {
+	padding: 0.8rem 1.25rem; 
+	border-radius: 50em; 
+	background: #f1f3f6;
+	margin-bottom: 5px;
+    color: #fff;
+    background-color: #6c757d;
+}
+.badge-color{
+    color: white;
+    background-color: #3E007C;
+}
+.purple-c{
+    background-color: #3E007C ;
+    color: violet;
+}
+.date-pic{
+    /* width: 20px; */
+    padding-left: 100px;
+    margin-top: 10px;
+}
+.holiday-badge-color{
+    color: white;
+    background-color:#FB350B;
+}
+.text-purple{
+    color: #3E007C;
+}
+.Emp-edit-btn{
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+.Emp-edit-btn:hover{
+    background-color:#3E007C;
+    color: white;
+} 
+.histo-btn{
+    background-color:#3E007C;
+    color: white;
+} 
+.emp-btn-dec{
+    color: #121416;
+    border-radius: 5px;
+    text-decoration: none !important;
+
+}
+.emp-btn-dec:hover{
+    background-color:#E8910D;
+    color: white;
+}
+
+.emp-calen-btn{
+    color: white;
+    background-color: #E8910D;
+    border-radius: 5px;
+    text-decoration: none !important; 
+
+ }
+/* .emp-calen-btn:hover{
+    background-color:#3E007C;
+    color: white;
+}  */
+.non-des{
+    color: white;
+    text-decoration: none !important;
+}
+
+
+
+
+
+
+
+
+
