@@ -54,7 +54,7 @@ function Navbar() {
 											</a>
 
 											<div class="dropdown-menu notification-dropdown-menu shadow-lg border-0 p-3 m-0 dropdown-menu-right">
-												<a class="dropdown-item p-2" href="#">
+												<a class="dropdown-item p-2" href="/Emp_profile">
 													<span class="media align-items-center">
 														<span class="lnr lnr-user mr-3"></span>
 														<span class="media-body text-truncate">
@@ -220,7 +220,7 @@ function Navbar() {
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-star pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Reviews</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-rocket pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Reports</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-sync pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
 									</ul>
 								</div>
 

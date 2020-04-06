@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react'
+import pro_pic from './../images/Employees/Leave_Employees/hritik.png'
 
-import leave_emp from './../assets/images/Employees/Leave_Employees/hritik.png'
+import './../css/style.css'
 
-import './../assets/css/style.css'
-
-export default function Leave_Action() {
+export default function View_LeaveDetails() {
     return (
         <Fragment>
             <div class="page-wrapper">
@@ -33,7 +32,7 @@ export default function Leave_Action() {
                                 <div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
                                     <div class="user-info card-body">
                                         <div class="user-avatar mb-4">
-                                            <img src={leave_emp} alt="User Image" class="img-fluid rounded-circle" width="100" />
+                                            <img src={pro_pic} alt="User Image" class="img-fluid rounded-circle" width="100" />
                                         </div>
                                         <div class="user-details">
                                             <h4><b>Mr. Hritik Roshan</b></h4>
