@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import manager_img from './../assets/images/manager/manager.png'
 import Accounts_Table from '../assets/tables/Accounts_Table'
 import Development_Table from './../assets/tables/Development_Table'
 import HR_Table from './../assets/tables/HR_Table'
 import QA_Table from './../assets/tables/QA_Tables'
-import All_table from './../assets/tables/All_Table'
+
 
 
 function Department() {
 	let { path, url } = useRouteMatch();
 	return (
+		
 		<Router>
 			<div class="page-wrapper">
 				<div class="container-fluid">
@@ -108,6 +108,10 @@ function Department() {
 										</table>
 									</div>
 								</div>
+								<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+									</div>
+								</div>
 							</aside>
 						</div>
 
@@ -180,7 +184,7 @@ function Department() {
 								<div class="col-md-6 col-xl-12 col-lg-6 d-flex">
 									<Switch>
 										<Route exact path={path}>
-											<All_table />
+											<Development_Table/>
 										</Route>
 										<Route path={`${path}/development_table`}>
 											<Development_Table />
@@ -200,9 +204,12 @@ function Department() {
 						</div>
 					</div>
 				</div>
+				
 			</div>
-
+			
 		</Router>
+		
+		
 	);
 }
 
