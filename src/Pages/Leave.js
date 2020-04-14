@@ -43,6 +43,9 @@ function Leave() {
 											<Link to={`${url}/leave-history`}>
 												<li class="list-group-item text-center button-6"><a class="text-dark">Leave History</a></li>
 											</Link>
+											<Link to={`${url}/leave-settings`}>
+												<li class="list-group-item text-center button-6"><a class="text-dark">Leave Settings</a></li>
+											</Link>
 										</ul>
 									</div>
 								</div>

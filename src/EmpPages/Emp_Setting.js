@@ -28,25 +28,14 @@ export default function Emp_Setting() {
                                     </div>
                                 </div>
 
-                                <div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
-                                    <div class="user-info card-body">
-                                        <div class="user-avatar mb-4">
-                                            <img src={hritik} alt="User Avatar" class="img-fluid rounded-circle" width="100" />
-                                        </div>
-                                        <div class="user-details">
-                                            <h4><b>Welcome Mr. Raveen</b></h4>
-                                            <p>Sun, 29 Nov 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                         <ul class="list-group">
-                                           <li class="mr-1 "><a href="Emp_profile" class="btn-ctm-space btn-dec"><span class="lnr lnr-user pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Profile</span></a></li>
+                                        <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Calendar"><span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
 										<li class="mr-1 active"><a class="btn-ctm-space emp-calen-btn" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
                                         </ul>

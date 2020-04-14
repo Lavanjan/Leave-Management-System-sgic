@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
-
 import hritik from './../assets/images/Employees/Leave_Employees/hritik.png'
 
-export default function Emp_LeaveHistory() {
+
+export default function HR_LeaveHistory() {
     return (
         <Fragment>
             <div class="page-wrapper">
@@ -17,8 +17,8 @@ export default function Emp_LeaveHistory() {
                                                 <div class="custom-search input-group">
                                                     <div class="custom-breadcrumb">
                                                         <ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
-                                                            <li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">Home</a></li>
-                                                            <li class="breadcrumb-item d-inline-block active">Employee</li>
+                                                            <li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">SGIC</a></li>
+                                                            <li class="breadcrumb-item d-inline-block active">Human Resource</li>
                                                         </ol>
                                                         <h4 class="text-dark">Leave History</h4>
                                                     </div>
@@ -27,14 +27,20 @@ export default function Emp_LeaveHistory() {
                                         </div>
                                     </div>
                                 </div>
+
+
+
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                         <ul class="list-group">
-                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/manage_employee"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
                                             <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
                                             <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-                                            <li class="mr-1 active"><a class="btn-ctm-space emp-calen-btn" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -51,7 +57,18 @@ export default function Emp_LeaveHistory() {
                                                     <h4 class="card-title mb-0">Holidays List </h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <div class="row">                                                      
+                                                    <div class="row">
+                                                        <div class="col-md-7 col-sm-6 ">
+                                                            <ul class="nav his-pills" id="pills-tab" role="tablist">
+                                                                <li class="nav-item mr-md-1">
+                                                                    <a class="btn his-link active " id="pills-home-tab" data-toggle="pill" href="#tabs-1" role="tab" aria-controls="pills-home" aria-selected="true">Personal leave history</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="btn his-link" id="pills-profile-tab" data-toggle="pill" href="#tabs-2" role="tab" aria-controls="pills-profile" aria-selected="false">Employees leave history</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
                                                         <table class="table table-borderless table-sm mt-3">
 
                                                             <tbody>
@@ -105,8 +122,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.03.26</td>
                                                                                     <td >2020.03.28</td>
                                                                                     <td ><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-information">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-information">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -116,8 +133,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.04.01</td>
                                                                                     <td>2020.04.03</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -127,8 +144,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.04.21</td>
                                                                                     <td>2020.04.23</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -138,8 +155,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.06.25</td>
                                                                                     <td>2020.06.25</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -149,8 +166,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.08.14</td>
                                                                                     <td>2020.08.15</td>
                                                                                     <td><span class="badge badge-danger">Rejected</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -160,8 +177,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.09.16</td>
                                                                                     <td>2020.09.18</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -171,8 +188,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.09.26</td>
                                                                                     <td>2020.09.90</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
@@ -202,8 +219,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.03.26</td>
                                                                                     <td >2020.03.28</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm" data-toggle="modal" data-target="#view-emp-information">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-emp-information">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -214,8 +231,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.04.01</td>
                                                                                     <td>2020.04.03</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -226,8 +243,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.04.21</td>
                                                                                     <td>2020.04.23</td>
                                                                                     <td><span class="badge badge-danger">Rejected</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -238,8 +255,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.06.25</td>
                                                                                     <td>2020.06.25</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -250,8 +267,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.08.14</td>
                                                                                     <td>2020.08.15</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -262,8 +279,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.09.16</td>
                                                                                     <td>2020.09.18</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -274,8 +291,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.09.26</td>
                                                                                     <td>2020.09.90</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-outline-info view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
@@ -319,208 +336,114 @@ export default function Emp_LeaveHistory() {
                         </div>
                     </div>
                 </div>
+                {/* View Leave Details Modal form */}
+                <div class="modal fade" id="view-information" role="document">
+                    <div class="modal-dialog modal-xl modal-top modal-full-height ">
+                        <div class="modal-content ">
+                            <div class="modal-body style-add-modal">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title mb-3">Leave Details</h4>
+                                <div class="row">
+                                    <table class="table table-hover table-borderless leave-action-table">
 
-                {/* New Team the modal */}
-                <div class="modal fade" id="addNewType">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Create New Date Type</h4>
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input class="form-control date-enter" type="text" placeholder="Date Type" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Key Date" />
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-danger ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn text-white ctm-border-radius btn-theme  button-1 float-right">Add</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Add basic info modal */}
-                <div class="modal fade" id="add_basicInformation">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Basic Information</h4>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Preferred Name" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="First Name" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Last Name" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Nationality" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input class="form-control datetimepicker date-enter" type="text" placeholder="Add Date of Birth" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Gender" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Blood Group" />
-                                </div>
-                                <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Add</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Edit basic Infor mation modal */}
-                <div class="modal fade" id="edit_basicInformation">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Edit Basic Information</h4>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Preferred Name" value="Maria" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="First Name" value="Maria" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Last Name" value="Cotton" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Nationality" value="American" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input class="form-control datetimepicker date-enter" type="text" placeholder="Add Date of Birth" value="05-07-1990" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Gender" value="Female" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Blood Group" value="A+" />
-                                </div>
-                                <button type="button" class="btn btn-danger float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Edit Contact the Modal */}
-                <div class="modal fade" id="edit_Contact">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Edit Contact</h4>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Phone Number" value="987654321" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Login Email" value="mariacotton@example.com" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Add Personal Email" value="maria@example.com" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Seconary Phone Number" value="986754231" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Web Site" value="www.focustechnology.com" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Connect Your Linkedin" value="#mariacotton" />
-                                </div>
-                                <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Add contact the modal */}
-                <div class="modal fade" id="add_Contact">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
+                                        <tbody>
+                                            <tr>
+                                                <td width="16%" className="bold-let">Leave Type : </td>
+                                                <td>Casual Leave</td>
+                                                <td className="bold-let">Leave Date : </td>
+                                                <td>2020.03.02 to 2020.03.03</td>
+                                                <td className="bold-let">Posting Date : </td>
+                                                <td>2020.03.01</td>
+                                            </tr>
 
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Add Contact</h4>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Phone Number" />
+                                            <tr>
+                                                <td className="bold-let">Leave Description : </td>
+                                                <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bold-let">Leave Status : </td>
+                                                <td colspan="5" className="text-success font-weight-bold">Approved</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bold-let">Manager Comments : </td>
+                                                <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bold-let">Manager Action Taken Date : </td>
+                                                <td colSpan="5">2020.03.01 &nbsp;13:45:19</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
                                 </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Login Email" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Add Personal Email" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Seconary Phone Number" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add Web Site" />
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Connect Your Linkedin" />
-                                </div>
-                                <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Add a key date modal */}
-                <div class="modal fade" id="addKeyDate">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
+                <div class="modal fade" id="view-emp-information" role="document">
+                    <div class="modal-dialog modal-xl modal-top modal-full-height ">
+                        <div class="modal-content ">
+                            <div class="modal-body style-add-modal">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Add New Date</h4>
-                                <div class="form-group">
-                                    <div class="input-group mb-1">
-                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Date Type" />
-                                    </div>
+                                <h4 class="modal-title mb-3">Leave Details</h4>
+                                <div class="row">
+                                    <table class="table table-hover leave-action-table">
+
+                                        <tbody>
+                                            <tr>
+                                                <td width="18%" className="bold-let">Employee Name :</td>
+                                                <td width="21%" className="text-primary bold-let">John Abraham</td>
+                                                <td width="13%" className="bold-let">Emp ID : </td>
+                                                <td width="22%">EMP358584</td>
+                                                <td width="14%" className="bold-let">Gender : </td>
+                                                <td width="15%">Male</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="16%" className="bold-let">Emp Email ID : </td>
+                                                <td>johnabraham@gmail.com</td>
+                                                <td className="bold-let">Contact No : </td>
+                                                <td colSpan="3">0758557861</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="16%" className="bold-let">Leave Type : </td>
+                                                <td>Casual Leave</td>
+                                                <td className="bold-let">Leave Date : </td>
+                                                <td>2020.03.02 to 2020.03.03</td>
+                                                <td className="bold-let">Posting Date : </td>
+                                                <td>2020.03.01</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td className="bold-let">Employee Leave Description : </td>
+                                                <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bold-let">Leave Status : </td>
+                                                <td colspan="5" className="text-success font-weight-bold">Approved</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bold-let">Manager Comments : </td>
+                                                <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bold-let">Manager Action Taken Date : </td>
+                                                <td colSpan="5">2020.03.01 &nbsp;13:45:19</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
                                 </div>
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Key Date" />
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Add</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* Edit Date Modal */}
-                <div class="modal fade" id="edit_Dates">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title mb-3">Edit Date</h4>
-                                <div class="form-group">
-                                    <div class="input-group mb-1">
-                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Start Date" value="06-07-2017" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Visa Expiry Date" value="06 -07-2020" />
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Add</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </Fragment>
     )

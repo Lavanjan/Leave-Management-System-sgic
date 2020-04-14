@@ -5,7 +5,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import './../assets/css/style.css'
 
 import manager_img from './../assets/images/manager/manager.png'
-import tiger from './../assets/images/Employees/Leave_Employees/tiger.png' 
+import tiger from './../assets/images/Employees/Leave_Employees/tiger.png'
 import hritik from './../assets/images/Employees/Leave_Employees/hritik.png'
 
 function Dashboard() {
@@ -32,29 +32,33 @@ function Dashboard() {
 									</div>
 								</div>
 							</div>
-							<div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
-								<div class="user-info card-body">
-									<div class="user-avatar mb-4">
-										<img src={manager_img} alt="User Avatar" class="img-fluid rounded-circle" width="100" />
-									</div>
-									<div class="user-details">
-										<h4><b>Welcome Mr. Raveen</b></h4>
-										<p>Sun, 29 Nov 2019</p>
-									</div>
+
+							{/* <div class="card shadow-sm ctm-border-radius">
+								<div class="card-body">
+									<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src={tiger} alt="image" class="img-fluid" /></span>
+									<span class="ml-4">Tiger shroff is working from home today.</span>
 								</div>
 							</div>
 							<div class="card shadow-sm ctm-border-radius">
-									<div class="card-body">
-										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {tiger} alt="image" class="img-fluid"/></span>
-										<span class="ml-4">Tiger shroff is working from home today.</span>
-									</div>
+								<div class="card-body">
+									<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src={hritik} alt="image" class="img-fluid" /></span>
+									<span class="ml-4">Hritik Roshan is away today.</span>
 								</div>
-								<div class="card shadow-sm ctm-border-radius">
-									<div class="card-body">
-										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {hritik} alt="image" class="img-fluid"/></span>
-										<span class="ml-4">Hritik Roshan is away today.</span>
-									</div>
+							</div> */}
+							<div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
+								<div class="card-body">
+									<ul class="list-group">
+										<li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+										<li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
+										<li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+										<li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+									</ul>
 								</div>
+							</div>
 						</aside>
 					</div>
 
@@ -118,7 +122,16 @@ function Dashboard() {
 								</div>
 							</div>
 						</div>
+						<div class="card shadow-sm ctm-border-radius">
+							<div class="card-body">
+								<span><i class="fa fa-bell text-warning" aria-hidden="true"></i></span>
+								<span class="ml-4">Your Leave Request has been accepted.</span>
+							</div>
+						</div>
 
+						{/* Leave Apply and Calendar DIV  */}
+							
+						{/* End of Leave and Calendar DIV */}
 						<div class="row">
 							<div class="col-md-6 col-xl-12 col-lg-6 d-flex">
 								<div class="card ctm-border-radius shadow-sm flex-fill">
@@ -129,10 +142,10 @@ function Dashboard() {
 										<table class="table table-bordered">
 											<thead>
 												<tr>
-													<th width = "5%" scope = "col">No</th>
-													<th width = "20%" scope = "col">Employee Name</th>
-													<th width = "13%" scope = "col">Leave Type</th>
-													<th width = "17%" scope = "col">From-To</th>
+													<th width="5%" scope="col">No</th>
+													<th width="20%" scope="col">Employee Name</th>
+													<th width="13%" scope="col">Leave Type</th>
+													<th width="17%" scope="col">From-To</th>
 													<th width="8%" scope="col">Status</th>
 													<th width="7%" scope="col">Action</th>
 												</tr>
@@ -143,9 +156,9 @@ function Dashboard() {
 													<td>Ravi Lavanjan</td>
 													<td>Casual Leave</td>
 													<td>2020.04.03 - 2020.04.05</td>
-													<td className = "text-info">Requested</td>
+													<td className="text-info">Requested</td>
 													<td className="text-center">
-														<a href = "/leave_action" class="btn text-white btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</a>
+														<a href="/leave_action" class="btn text-white btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</a>
 													</td>
 												</tr>
 												<tr>
@@ -153,7 +166,7 @@ function Dashboard() {
 													<td>Linges Sivapiriyan</td>
 													<td>Sick Leave</td>
 													<td>2020.04.06 - 2020.04.08</td>
-													<td className = "text-info">Requested</td>
+													<td className="text-info">Requested</td>
 													<td className="text-center">
 														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
 													</td>
@@ -163,7 +176,7 @@ function Dashboard() {
 													<td>Jeya Sathurya</td>
 													<td>Half Day</td>
 													<td>2020.04.08</td>
-													<td className = "text-info">Requested</td>
+													<td className="text-info">Requested</td>
 													<td className="text-center">
 														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
 													</td>
@@ -173,7 +186,7 @@ function Dashboard() {
 													<td>Sinthu Wamsan</td>
 													<td>Sick Leave</td>
 													<td>2020.04.08 - 2020.04.09</td>
-													<td className = "text-info">Requested</td>
+													<td className="text-info">Requested</td>
 													<td className="text-center">
 														<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Action</button>
 													</td>

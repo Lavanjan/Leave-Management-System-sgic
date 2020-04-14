@@ -4,7 +4,7 @@ import leave_emp from './../assets/images/Employees/Leave_Employees/hritik.png'
 
 import './../assets/css/style.css'
 
-function Leave_ViewAll() {
+export default function HR_Leave_Action() {
     return (
         <Fragment>
             <div class="page-wrapper">
@@ -19,10 +19,10 @@ function Leave_ViewAll() {
                                                 <div class="custom-search input-group">
                                                     <div class="custom-breadcrumb">
                                                         <ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
-                                                            <li class="breadcrumb-item d-inline-block"><a href="index.html" class="text-dark">Home</a></li>
-                                                            <li class="breadcrumb-item d-inline-block active">Leave</li>
+                                                            <li class="breadcrumb-item d-inline-block"><a href="index.html" class="text-dark">SGIC</a></li>
+                                                            <li class="breadcrumb-item d-inline-block active">Human Resource</li>
                                                         </ol>
-                                                        <h4 class="text-dark">Action</h4>
+                                                        <h4 class="text-dark">Leave Process</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -30,24 +30,18 @@ function Leave_ViewAll() {
                                     </div>
                                 </div>
 
-                                <div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
-                                    <div class="user-info card-body">
-                                        <div class="user-avatar mb-4">
-                                            <img src={leave_emp} alt="User Image" class="img-fluid rounded-circle" width="100" />
-                                        </div>
-                                        <div class="user-details">
-                                            <h4><b>Mr. John Abraham</b></h4>
-                                            <p>Software Engineer</p>
-                                            <i class="fa fa-star text-primary"></i>&nbsp;
-                                        <i class="fa fa-star text-primary"></i>&nbsp;
-                                        <i class="fa fa-star text-primary"></i>&nbsp;
-                                        <i class="fa fa-star text-primary"></i>&nbsp;
-                                        <i class="fa fa-star"></i>&nbsp;
-
-									</div>
-
-
-
+                                <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </aside>
@@ -118,36 +112,36 @@ function Leave_ViewAll() {
                                         <div class="card-header">
                                             <h4 class="card-title mb-0">
                                                 Employee Details
-                                        <a href="javascript:void(0)" class="float-right text-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        {/* <a href="javascript:void(0)" class="float-right text-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> */}
                                             </h4>
                                         </div>
 
-                                        <table class="table table-hover leave-action-table">
+                                        <table class="table table-borderless leave-action-table">
 
                                             <tbody>
                                                 <tr>
                                                     <td width="18%" className="bold-let">Employee Name :</td>
-                                                    <td width="21%" className="text-primary bold-let">John Abraham</td>
+                                                    <td width="21%" className="text-primary bold-let">Hritik Roshan</td>
                                                     <td width="13%" className="bold-let">Emp ID : </td>
-                                                    <td width="22%">EMP358584</td>
+                                                    <td width="22%">EMP254584</td>
                                                     <td width="14%" className="bold-let">Gender : </td>
                                                     <td width="15%">Male</td>
                                                 </tr>
 
                                                 <tr>
                                                     <td width="16%" className="bold-let">Emp Email ID : </td>
-                                                    <td>johnabraham@gmail.com</td>
+                                                    <td>lavan@gmail.com</td>
                                                     <td className="bold-let">Contact No : </td>
-                                                    <td colSpan="3">0758557861</td>
+                                                    <td colSpan="3">0755517771</td>
                                                 </tr>
 
                                                 <tr>
                                                     <td width="16%" className="bold-let">Leave Type : </td>
                                                     <td>Casual Leave</td>
                                                     <td className="bold-let">Leave Date : </td>
-                                                    <td>2020.03.02 to 2020.03.03</td>
+                                                    <td>2020.04.02 to 2020.04.04</td>
                                                     <td className="bold-let">Posting Date : </td>
-                                                    <td>2020.03.01</td>
+                                                    <td>2020.04.01</td>
                                                 </tr>
 
                                                 <tr>
@@ -155,27 +149,62 @@ function Leave_ViewAll() {
                                                     <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="bold-let">Leave Status : </td>
-                                                    <td colspan="5" className="text-success font-weight-bold">Approved</td>
+                                                    <td className="bold-let">Documents : </td>
+                                                       <td colSpan = "4"><i class="fa fa-file-pdf-o fa-lg text-danger" aria-hidden="true"></i>&nbsp;<span>Medical certificate</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="bold-let">Manager Reply Description : </td>
-                                                    <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
+                                                    <td className="bold-let">Comments : </td>
+                                                    <td colSpan = "3"> <textarea class="form-control" rows="3" /></td>
+                                                    <td colSpan = "2"><a href="" class="btn btn-theme send-btn btn-primary ctm-border-radius mt-3 ml-4">Approve</a>
+                                                    <span className = "rej-center">Decline</span>
+                                                    </td>
                                                 </tr>
-                                                <tr>
-                                                    <td className="bold-let">Manager Action Taken Date : </td>
-                                                    <td>2020.03.01 &nbsp;13:45:19</td>
-                                                </tr>
-
                                             </tbody>
                                         </table>
-                                        {/* <div class="text-center">
-										<a href="" class="btn btn-theme apply-leave text-white ctm-border-radius mt-1 mr-5">Accept</a>
-									    <a href="" class="btn cancel-leave text-white ctm-border-radius mt-1" data-toggle = "modal" data-target = "#add-information">Reject</a>
-									</div> */}
+                                        <div class="text-center">
+                                            {/* <a href="" class="btn btn-theme send-btn btn-primary ctm-border-radius mt-1 mr-5">Approve</a> */}
+                                            {/* <a href="" class="btn cancel-leave text-white ctm-border-radius mt-1" data-toggle="modal" data-target="#add-information">Reject</a> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Other Leave */}
+                            <div class="row">
+                                <div class="col-md-6 col-xl-6 col-lg-6 d-flex">
+                                    <div class="card ctm-border-radius shadow-sm flex-fill">
+                                        <div class="card-header">
+                                            <h6 class="card-title mb-0">
+                                                Leave requests during same time
+                                            </h6>
+                                        </div>
+                                        <div class="card-body" style={{ height: "7rem" }}>
+                                            <span><i class="fa fa-calendar fa-size" aria-hidden="true"></i></span>
+                                        </div>
+                                        <h6 className="text-center font-weight-normal">No leave requests during<br />  this period</h6>
+                                        <p className="font-italic text-center  small">All employees leave requests. will be shown here.</p>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-xl-6 col-lg-6 d-flex">
+                                    <div class="card ctm-border-radius shadow-sm flex-fill">
+                                        <div class="card-header">
+                                            <h6 class="card-title mb-0">
+                                                Events happening during this period
+                                            </h6>
+                                        </div>
+                                        <div class="card-body" style={{ height: "7rem" }}>
+                                            <span><i class="fa fa-calendar fa-size" aria-hidden="true"></i></span>
+                                        </div>
+                                        <h6 className="text-center font-weight-normal">No events happening<br /> during this period</h6>
+                                        <p className="font-italic text-center  small">Public holidays, shifts etc. will be shown here.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* End of other leave */}
                         </div>
                     </div>
                 </div>
@@ -203,4 +232,3 @@ function Leave_ViewAll() {
         </Fragment>
     )
 }
-export default Leave_ViewAll

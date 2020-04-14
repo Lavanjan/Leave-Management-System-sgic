@@ -8,6 +8,7 @@ import Apply_Leave from './../assets/tables/Apply_Leave'
 import Leave_History from './../assets/tables/Leave_History'
 import Leave_Setting from './../assets/tables/Leave_Setting'
 import Setting_Page from './../assets/tables/Setting_Landpage'
+import logo from './../assets/images/logo_change.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -32,9 +33,9 @@ function Settings() {
 														<div class="custom-breadcrumb">
 															<ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
 																<li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">Home</a></li>
-																<li class="breadcrumb-item d-inline-block active">Leave</li>
+																<li class="breadcrumb-item d-inline-block active">Settings</li>
 															</ol>
-															<h4 class="text-dark">Leave</h4>
+															<h4 class="text-dark">Setting</h4>
 														</div>
 													</div>
 												</div>
@@ -43,20 +44,11 @@ function Settings() {
 									</div>
 									<div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
 										<div class="card-body">
-											<ul class="list-group">
-											<Link to={`${url}`}>
-													<li class="list-group-item text-center apply-leave-btn text-white">Settings</li>
-												</Link><br></br>
-												<Link to={`${url}/leave_settings`}>
-													<li class="list-group-item text-center apply-leave-btn text-white">Leave Settings</li>
-												</Link>
-												{/* <Link to={`${url}/manager_leave_history`}>
-												<li class="list-group-item text-center button-6"><a class="text-dark">Your Leave History</a></li>
-											</Link>
-											<Link to={`${url}/leave-history`}>
-												<li class="list-group-item text-center button-6"><a class="text-dark">Employees Leave History</a></li>
-											</Link> */}
-											</ul>
+										<ul class="list-group">
+                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/settings"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">System</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/leave_setting"><span class="lnr lnr-unlink pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Setting</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
+                                            </ul>
 										</div>
 									</div>
 								</aside>
@@ -64,19 +56,57 @@ function Settings() {
 
 
 							<div class="col-xl-9 col-lg-8  col-md-12">
+							<div class="row">
+			<div class="col-md-6 d-flex">
+				<div class="card ctm-border-radius shadow-sm company-logo flex-fill">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Company Logo</h4>
+					</div>
+					<div class="card-body">
+						<form>
+							<div class="row">
+								<div class="col-12">
+									<div class="avatar-upload">
+										<div class="avatar-edit">
+											<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+											<label for="imageUpload"></label>
+										</div>
+										<div class="avatar-preview">
+											<img src={logo} />
+											{/* <div id="imagePreview"> */}
+											{/* </div> */}
+										</div>
+									</div>
+								</div>
 
-								<Switch>
-								<Route exact path={`${path}`}>
-										<Setting_Landpage />
-									</Route>
-									<Route exact path={`${path}/leave_settings`}>
-										<Leave_Setting />
-									</Route>
-									{/* <Route path={`${path}/leave-history`}>
-										<Leave_History />
-									</Route> */}
-
-								</Switch>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 d-flex">
+				<div class="card flex-fill ctm-border-radius shadow-sm">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Change Password</h4>
+						<span class="ctm-text-sm">Your password needs to be at least 8 characters long.</span>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Current Password" />
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="New Password" id="pwd" />
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Repeat Password" />
+						</div>
+						<div class="text-center">
+							<a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white apply-leave-btn text-center">Change My Password</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 							</div>
 						
 							

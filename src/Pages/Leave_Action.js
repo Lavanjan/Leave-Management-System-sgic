@@ -43,11 +43,7 @@ export default function Leave_Action() {
                                         <i class="fa fa-star text-primary"></i>&nbsp;
                                         <i class="fa fa-star text-primary"></i>&nbsp;
                                         <i class="fa fa-star"></i>&nbsp;
-
 									</div>
-
-
-
                                     </div>
                                 </div>
                             </aside>
@@ -118,7 +114,7 @@ export default function Leave_Action() {
                                         <div class="card-header">
                                             <h4 class="card-title mb-0">
                                                 Employee Details
-                                        <a href="javascript:void(0)" class="float-right text-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        {/* <a href="javascript:void(0)" class="float-right text-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> */}
                                             </h4>
                                         </div>
 

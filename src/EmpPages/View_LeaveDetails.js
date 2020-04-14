@@ -44,7 +44,7 @@ export default function View_LeaveDetails() {
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                     <ul class="list-group">
-                                           <li class="mr-1 "><a href="Emp_profile" class="btn-ctm-space btn-dec "><span class="lnr lnr-user pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Profile</span></a></li>
+                                           <li class="mr-1 "><a href="Emp_profile" class="btn-ctm-space btn-dec "><span class="lnr lnr-user pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Calendar"><span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
@@ -128,21 +128,21 @@ export default function View_LeaveDetails() {
                                 <table class="table table-hover leave-action-table">
         
                                     <tbody>
-                                        <tr>
+                                        {/* <tr>
                                         <td width = "18%" className = "bold-let">Employee Name :</td>
                                         <td width = "21%" className = "text-primary bold-let">Raveen Rajah</td>
                                         <td width = "13%" className = "bold-let">Emp ID : </td>
                                         <td width = "22%">EMP358584</td>
                                         <td width = "14%" className = "bold-let">Gender : </td>
                                         <td width = "15%">Male</td>
-                                        </tr>
+                                        </tr> */}
 
-                                        <tr>
+                                        {/* <tr>
                                         <td width = "16%" className = "bold-let">Emp Email ID : </td>
                                         <td>Raveenrajah@gmail.com</td>
                                         <td className = "bold-let">Contact No : </td>
                                         <td colSpan = "3">0758557861</td>
-                                        </tr>
+                                        </tr> */}
 
                                         <tr>
                                         <td width = "16%" className = "bold-let">Leave Type : </td>

@@ -46,30 +46,13 @@ export default function Emp_Calendar() {
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                         <ul class="list-group">
-                                            {/* <a href="Emp_profile">
-                                                <li class="list-group-item text-center apply-leave-btn text-white">Profile</li>
-                                            </a>
-                                            <a href="/Emp_Details">
-                                                <li class="list-group-item text-center apply-leave-btn">Details</li>
-                                            </a>
-                                            <a href="/Emp_Holiday">
-                                                <li class="list-group-item text-center apply-leave-btn">Public Holidays</li>
-                                            </a>
-                                            <a href="Emp_Calendar">
-                                                <li class="list-group-item text-center apply-leave-btn">Calendar</li>
-                                            </a>
-                                            <a href="Emp_LeaveHistory">
-                                                <li class="list-group-item text-center apply-leave-btn">Leave History</li>
-                                            </a>
-                                            <a href="Emp_Setting">
-                                                <li class="list-group-item text-center apply-leave-btn">Settings</li>
-                                            </a> */}
-                                            <li class="mr-1 "><a href="Emp_profile" class="btn-ctm-space btn-dec"><span class="lnr lnr-user pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Profile</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-										<li class="mr-1 active"><a class="btn-ctm-space  emp-calen-btn" href="/Emp_Calendar"><span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+
+                                            <li class="mr-1 "><a href="Emp_profile" class="btn-ctm-space btn-dec"><span class="lnr lnr-user pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space  emp-calen-btn" href="/Emp_Calendar"><span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
 
                                         </ul>
                                     </div>
@@ -102,9 +85,7 @@ export default function Emp_Calendar() {
                                                             <div class="calendar-events" data-class="bg-warning"><i class="fa fa-star text-primary"></i> CEO Meeting</div>
                                                         </div>
 
-                                                        {/* <a href="javascript:void(0)" data-toggle="modal" data-target="#add_new_event" class="btn mb-3 btn-theme text-white ctm-border-radius btn-block calen-btn">
-                                    <i class="fa fa-plus"></i> Add Category
-            </a> */}
+         
                                                     </div>
                                                 </div>
                                             </aside>

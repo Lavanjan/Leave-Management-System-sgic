@@ -28,27 +28,16 @@ export default function Emp_Details() {
                                     </div>
                                 </div>
 
-                                <div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
-                                    <div class="user-info card-body">
-                                        <div class="user-avatar mb-4">
-                                            <img src={hritik} alt="User Avatar" class="img-fluid rounded-circle" width="100" />
-                                        </div>
-                                        <div class="user-details">
-                                            <h4><b>Welcome Mr. Raveen</b></h4>
-                                            <p>Sun, 29 Nov 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
+                               
 
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                         <ul class="list-group">
-                                           <li class="mr-1 "><a href="Emp_profile" class="btn-ctm-space btn-dec"><span class="lnr lnr-user pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Profile</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
-										<li class="mr-1 active"><a class="btn-ctm-space emp-calen-btn " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Calendar"><span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                        <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space emp-calen-btn " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -256,44 +245,7 @@ export default function Emp_Details() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-6 col-lg-12 col-md-5 col-12 d-flex">
-                                            <div class="card flex-fill ctm-border-radius shadow-sm">
-                                                <div class="card-header">
-                                                    <h4 class="card-title mb-0">Leave Off Details</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Year</h5>
-                                                    <p class="mb-0">01 January – 31 December</p>
-                                                    <hr />
-                                                    <h5 class="card-title">Days Used</h5>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-primary w-25"> 5 days</div>
-                                                    </div>
-                                                    <hr />
-                                                    <h5 class="card-title">Days</h5>
-                                                    <p>5 Used</p>
-                                                    <hr />
-                                                    <h5 class="card-title">Non Deductible Days</h5>
-                                                    <p class="text-theme btn btn-theme ctm-border-radius btn-sm text-white d-inline-block">5 Approved</p>
-                                                    <p class="text-theme btn btn-theme ctm-border-radius btn-sm text-white d-inline-block">7 Pending</p>
-                                                    <hr />
-                                                    <h5 class="card-title">Attendance</h5>
-                                                    <p class="mb-3"><img class="mr-2 leave-img img-fluid" src="assets/img/plaster.svg" alt="Sick Leave" />3 Sick Days</p>
-                                                    <p class="mb-0"><img class="mr-2 leave-img img-fluid" src="assets/img/desk-lamp.svg" alt="Working from Home" />2 Working from Home</p>
-                                                    <hr />
-                                                    <h4 class="card-title d-inline-block">Time Off Approvers</h4>
-                                                    <div class="form-row form-group">
-                                                        <div class="col-sm-12">
-                                                            <select class="form-control select">
-                                                                <option selected>Choose Approver</option>
-                                                                <option>Admin</option>
-                                                                <option>Richard Wilson</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
 
