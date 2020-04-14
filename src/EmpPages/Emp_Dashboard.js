@@ -6,13 +6,22 @@ import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
 import { NotificationContainer, NotificaionManager } from 'react-notifications'
 
+import { DatePicker } from 'antd';
 
 
 import './../assets/css/style.css'
 // import 'react-notifications/lib/Notification.css'
 
+const { RangePicker } = DatePicker;
 
 class Emp_Dashboard extends Component {
+    state = {
+        size: 'default',
+      };
+    
+      handleSizeChange = e => {
+        this.setState({ size: e.target.value });
+      };
 
     state = {
         date: new Date(),
@@ -34,6 +43,7 @@ class Emp_Dashboard extends Component {
 
 
     render() {
+        const { size } = this.state;
         return (
             <Fragment>
                 <div class="page-wrapper">
@@ -180,7 +190,7 @@ class Emp_Dashboard extends Component {
                                                                 <div class="col-sm-6">
                                                                     <div class="form-group">
                                                                         <label>Dates</label>
-                                                                        <input type="text" class="form-control datetimepicker" />
+                                                                        <RangePicker size={size} />
                                                                     </div>
                                                                 </div>
                                                                 {/* <div class="col-sm-6 leave-col">
@@ -221,10 +231,10 @@ class Emp_Dashboard extends Component {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="text-center">
+                                                            {/* <div class="text-center">
                                                                 <a href="" class="btn btn-theme apply-leave text-white ctm-border-radius mt-4 mr-5" data-toggle="modal" data-target="#add-information">Apply</a>
                                                                 <a href="" class="btn cancel-leave text-white ctm-border-radius mt-4">Cancel</a>
-                                                            </div>
+                                                            </div> */}
                                                         </form>
                                                     </div>
                                                 </div>
@@ -274,13 +284,13 @@ class Emp_Dashboard extends Component {
                                         </div>
 
 
-                                        <div class="card shadow-sm ctm-border-radius">
+                                        {/* <div class="card shadow-sm ctm-border-radius">
                                             <div class="alert alert-light" role="alert">
                                                 <h4 class="alert-heading">Discussion!</h4>
                                                 <p className="text-dark">Leave Approvals HritikRoshan (Sick Leave From 2020.03.25 to 2020.03.29) <br /><i class="fa fa-exclamation-circle text-warning" aria-hidden="true"></i> &nbsp;Please Attach the docto's certificate</p>
                                                 <p class="mb-0 font-italic text-dark">Message from Alan Sathyathas (Manager at SGIC)</p>
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                         <div className="row">
                                             <div className="remain-leave-table col-12">

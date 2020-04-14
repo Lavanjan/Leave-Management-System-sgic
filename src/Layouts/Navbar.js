@@ -17,11 +17,11 @@ function Navbar() {
 				<div class="container-fluid">
 					<div class="row align-items-center">
 						<div class="col-lg-3 col-md-3 col-sm-3 col-6">
-							<div class="logo my-3 my-sm-0">
+							{/* <div class="logo my-3 my-sm-0">
 								<a href="index.html">
 									<img src={logo} alt="logo image" class="img-fluid" width="100" />
 								</a>
-							</div>
+							</div> */}
 						</div>
 						<div class="col-lg-9 col-md-9 col-sm-9 col-6 text-right">
 							<div class="user-block d-none d-lg-block">

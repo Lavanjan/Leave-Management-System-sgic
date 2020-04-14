@@ -33,7 +33,7 @@ export default function Emp_LeaveHistory() {
                                             <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
                                             <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
                                             <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-                                            <li class="mr-1 active"><a class="btn-ctm-space emp-calen-btn" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space text-white emp-calen-btn" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
                                             <li class="mr-1"><a class="btn-ctm-space btn-dec" href="Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
                                         </ul>
                                     </div>
@@ -105,8 +105,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.03.26</td>
                                                                                     <td >2020.03.28</td>
                                                                                     <td ><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-information">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-information">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -116,8 +116,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.04.01</td>
                                                                                     <td>2020.04.03</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -127,8 +127,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.04.21</td>
                                                                                     <td>2020.04.23</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -138,8 +138,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.06.25</td>
                                                                                     <td>2020.06.25</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -149,8 +149,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.08.14</td>
                                                                                     <td>2020.08.15</td>
                                                                                     <td><span class="badge badge-danger">Rejected</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -160,8 +160,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td >2020.09.16</td>
                                                                                     <td>2020.09.18</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
 
@@ -171,8 +171,8 @@ export default function Emp_LeaveHistory() {
                                                                                     <td>2020.09.26</td>
                                                                                     <td>2020.09.90</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td>
-                                                                                        <button type="button" class="btn btn-info font-weight-bold view-btn btn-sm">View</button>
+                                                                                    <td className = "text-center">
+                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>

@@ -6,15 +6,23 @@ import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
 import { NotificationContainer, NotificaionManager } from 'react-notifications'
 
+import { DatePicker } from 'antd';
+// import 'antd/dist/antd.css';
+
 
 
 import './../assets/css/style.css'
-import tiger from './../assets/images/Employees/Leave_Employees/tiger.png'
-import hritik from './../assets/images/Employees/Leave_Employees/hritik.png'
 // import 'react-notifications/lib/Notification.css'
 
-
+const { RangePicker } = DatePicker;
 class HR_Dashboard extends Component {
+    state = {
+        size: 'default',
+      };
+    
+      handleSizeChange = e => {
+        this.setState({ size: e.target.value });
+      };
 
     state = {
         date: new Date(),
@@ -33,9 +41,8 @@ class HR_Dashboard extends Component {
             }
         };
     };
-
-
     render() {
+        const { size } = this.state;
         return (
             <Fragment>
                 <div class="page-wrapper">
@@ -185,7 +192,8 @@ class HR_Dashboard extends Component {
                                                                 <div class="col-sm-6">
                                                                     <div class="form-group">
                                                                         <label>Dates</label>
-                                                                        <input type="text" class="form-control datetimepicker" />
+                                                                        <RangePicker size={size} />
+                                                                        {/* <input type="text" class="form-control datetimepicker" /> */}
                                                                     </div>
                                                                 </div>
                                                                 {/* <div class="col-sm-6 leave-col">
