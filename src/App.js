@@ -29,6 +29,7 @@ import HR_LeaveProcess from './HR_Pages/HR_LeaveProcess'
 import HR_LeaveHistory from './HR_Pages/HR_LeaveHistory'
 import HR_Settings from './HR_Pages/HR_Settings'
 import HR_ManageEmp from './HR_Pages/HR_ManageEmp'
+import HR_Details from './HR_Pages/HR_Details'
 
 import Leave_Setting from './Admin_Pages/Leave_Settings'
 
@@ -55,6 +56,7 @@ class App extends Component{
     <Route exact path = "/HR_leave-history" component = { HR_LeaveHistory }/>
     <Route exact path = "/HR_settings" component = { HR_Settings }/>
     <Route exact path = "/manage_employee" component = { HR_ManageEmp }/>
+    <Route exact path = "/HR_details" component = { HR_Details }/>
 
     <Route exact path = "/leave_setting" component = { Leave_Setting }/>
 

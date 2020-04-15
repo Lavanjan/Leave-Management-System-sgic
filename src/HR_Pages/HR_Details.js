@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
-
 import hritik from './../assets/images/Employees/Leave_Employees/hritik.png'
 
-export default function HR_Settings() {
+
+export default function HR_Details() {
     return (
         <Fragment>
             <div class="page-wrapper">
@@ -17,10 +17,10 @@ export default function HR_Settings() {
                                                 <div class="custom-search input-group">
                                                     <div class="custom-breadcrumb">
                                                         <ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
-                                                            <li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">SGIC</a></li>
-                                                            <li class="breadcrumb-item d-inline-block active">Human Resource</li>
+                                                            <li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">Home</a></li>
+                                                            <li class="breadcrumb-item d-inline-block active">Employees</li>
                                                         </ol>
-                                                        <h4 class="text-dark">Settings</h4>
+                                                        <h4 class="text-dark">Infromations</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -33,14 +33,14 @@ export default function HR_Settings() {
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                     <ul class="list-group">
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
+                                                <li class="mr-1 active"><a class="btn-ctm-space btn-dec" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
                                                 <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
                                                 <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
                                                 <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/manage_employee"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space text-white calen-btn" href="/HR_details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
                                                 <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
                                                 <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
                                             </ul>
                                     </div>
                                 </div>
@@ -51,53 +51,68 @@ export default function HR_Settings() {
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
-                                        <div class="col-lg-6 d-flex">
+                                        <div class="col-xl-4 col-lg-6 col-md-6 d-flex">
                                             <div class="card flex-fill ctm-border-radius shadow-sm">
                                                 <div class="card-header">
-                                                    <h4 class="card-title mb-0">Change Password</h4>
-                                                    <span class="ctm-text-sm">Your password needs to be at least 8 characters long.</span>
+                                                    <h4 class="font-weight-normal mb-0">Basic Information</h4>
                                                 </div>
-                                                <div class="card-body">
-                                                    <div class="form-group">
-                                                        <input type="password" class="form-control" placeholder="Current Password" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="password" class="form-control" placeholder="New Password" id="pwd" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="password" class="form-control" placeholder="Repeat Password" />
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white apply-leave-btn text-center">Change My Password</a>
-                                                    </div>
+                                                <div class="card-body text-center">
+                                                    <p class="card-text mb-3"><span class="text-primary">Preferred Name </span> Hritik</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">First Name :</span> Hritik</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Last Name : </span>Roshan</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Nationality :</span> SriLankan</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Date of Birth </span><br></br> 05 December 1980</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Gender : </span>Male</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Blood Group :</span> O+</p>
+                                                    <a href="" class="btn Emp-edit-btn text-white ctm-border-radius mt-4" data-toggle="modal" data-target="#edit_basicInformation">Edit</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 d-flex">
-                                            <div class="card reminder flex-fill ctm-border-radius shadow-sm">
+                                        <div class="col-xl-4 col-lg-6 col-md-6 d-flex">
+                                            <div class="card flex-fill  ctm-border-radius shadow-sm">
                                                 <div class="card-header">
-                                                    <h4 class="card-title mb-0">Company Notification Settings</h4>
-                                                    <span class="ctm-text-sm">You will receive information across the whole company.</span>
+                                                    <h4 class="font-weight-normal mb-0">Contact</h4>
                                                 </div>
-                                                <div class="card-body">
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" class="custom-control-input" id="weekly-digest" checked />
-                                                        <label class="custom-control-label" for="weekly-digest"><span class="h6">Work From Home Notifications</span><br /><span class="ctm-text-sm">Never miss a notification that someone will be working from home.</span> </label>
+                                                <div class="card-body text-center">
+                                                    <p class="card-text mb-3"><span class="text-primary">Phone Number </span><br></br>077 458 6942</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Personal Email  </span><br></br>hritikroshan@gmail.com</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Secondary Number </span><br></br>021-226 5698</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Web Site  </span><br></br>www.medium.com/hritk</p>
+                                                    <p class="card-text mb-3"><span class="text-primary">Linkedin  </span><br></br>github.com/hritk</p>
+                                                    <a href="" class="btn Emp-edit-btn text-white ctm-border-radius mt-4" data-toggle="modal" data-target="#edit_basicInformation">Edit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                            <div class="row">
+                                                <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
+                                                    <div class="card ctm-border-radius shadow-sm flex-fill">
+                                                        <div class="card-header">
+                                                            <h4 class="font-weight-normal mb-0">Payroll Details</h4>
+                                                        </div>
+                                                        <div class="card-body text-center">
+                                                            <p class="card-text mb-3"><span class="text-primary">Bank Name  <br></br></span>Commercial Bank PLC</p>
+                                                            <p class="card-text mb-3"><span class="text-primary">Bank Account Number  <br></br></span>800608945</p>
+                                                            <p class="card-text mb-3"><span class="text-primary">Bank Contact Number <br></br> </span>021-200 5689</p>
+
+                                                            <a href="" class="btn Emp-edit-btn text-white ctm-border-radius mt-4" data-toggle="modal" data-target="#edit_payroll">Edit</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" class="custom-control-input" id="weekly-payroll" checked />
-                                                        <label class="custom-control-label" for="weekly-payroll"><span class="h6">Leave Accepted Notification</span><br /><span class="ctm-text-sm">When Manager has been accept your leave request.</span></label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox mb-3">
-                                                        <input type="checkbox" class="custom-control-input" id="Key" checked />
-                                                        <label class="custom-control-label" for="Key"><span class="h6">Off Boardings</span><br /><span class="ctm-text-sm">Informs you when a team member has a leaving date set and reminds you the day before.</span></label>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <button class="btn btn-theme apply-leave-btn ctm-border-radius text-white">Update Notification Settings</button>
+
+                                                </div>
+                                                <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
+                                                    <div class="card ctm-border-radius shadow-sm flex-fill">
+                                                        <div class="card-header">
+                                                            <h4 class="font-weight-normal d-inline-block mb-0">Join Date</h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 className="font-weight-normal">2015 January 15</h5>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -309,6 +324,33 @@ export default function HR_Settings() {
                     </div>
                 </div>
             </div>
+
+{/* Edith Payroll */}
+
+            <div class="modal fade" id="edit_payroll">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title mb-3">Edit Payroll</h4>
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Add Bank Name" Value=" Commercial Bank PLC."/>
+						
+						</div>
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Add Bank Account Number" value="8006982547"/>
+							
+						</div>
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Add Bank Sort Code" value="201-220 6598"/>
+							
+						</div>
+						<button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
         </Fragment>
     )
 }
