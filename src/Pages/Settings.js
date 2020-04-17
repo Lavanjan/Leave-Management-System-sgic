@@ -46,8 +46,7 @@ function Settings() {
 										<div class="card-body">
 										<ul class="list-group">
                                                 <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/settings"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">System</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/leave_setting"><span class="lnr lnr-unlink pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Setting</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/calendar"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
                                             </ul>
 										</div>
 									</div>

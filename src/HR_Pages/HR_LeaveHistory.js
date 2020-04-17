@@ -33,14 +33,10 @@ export default function HR_LeaveHistory() {
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                     <div class="card-body">
                                         <ul class="list-group">
-                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
-                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
-                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
-                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/manage_employee"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
-                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
-                                            <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-                                            <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Leave</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space btn-dec text-white calen-btn" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Emplyee Leave History</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/leave_setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Settings</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -54,11 +50,11 @@ export default function HR_LeaveHistory() {
                                         <div class="col-xl-12 col-lg-12 col-md-7 col-12 d-flex">
                                             <div class="card ctm-border-radius shadow-sm flex-fill">
                                                 <div class="card-header">
-                                                    <h4 class="card-title mb-0">Holidays List </h4>
+                                                    <h4 class="card-title mb-0">Employee Leave History </h4>
                                                 </div>
                                                 <div class="card-body">
                                                     <div class="row">
-                                                        <div class="col-md-7 col-sm-6 ">
+                                                        {/* <div class="col-md-7 col-sm-6 ">
                                                             <ul class="nav his-pills" id="pills-tab" role="tablist">
                                                                 <li class="nav-item mr-md-1">
                                                                     <a class="btn his-link active " id="pills-home-tab" data-toggle="pill" href="#tabs-1" role="tab" aria-controls="pills-home" aria-selected="true">Personal leave history</a>
@@ -67,7 +63,7 @@ export default function HR_LeaveHistory() {
                                                                     <a class="btn his-link" id="pills-profile-tab" data-toggle="pill" href="#tabs-2" role="tab" aria-controls="pills-profile" aria-selected="false">Employees leave history</a>
                                                                 </li>
                                                             </ul>
-                                                        </div>
+                                                        </div> */}
 
                                                         <table class="table table-borderless table-sm mt-3">
 
@@ -104,102 +100,7 @@ export default function HR_LeaveHistory() {
                                                             <div class="tab-content py-0" id="pills-tabContent">
                                                                 <div class="tab-pane py-0 active" id="tabs-1" role="tabpanel">
                                                                     <div class="table-responsive table-hover">
-                                                                        <table class="table table-bordered table-hover">
-                                                                            <thead>
-                                                                                <tr>
-                                                                                    <th className=" th-bold" scope="col">Date <span className="float-right sort-opacity"><i class="fa fa-sort" aria-hidden="true"></i></span></th>
-                                                                                    <th className=" th-bold" scope="col">Leave Type</th>
-                                                                                    <th className=" th-bold" scope="col">From</th>
-                                                                                    <th className=" th-bold" scope="col">To</th>
-                                                                                    <th className=" th-bold" scope="col">Status</th>
-                                                                                    <th className=" th-bold" scope="col">Action</th>
-                                                                                </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <td>2020.03.25</td>
-                                                                                    <td>Sick Leave</td>
-                                                                                    <td >2020.03.26</td>
-                                                                                    <td >2020.03.28</td>
-                                                                                    <td ><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-information">View</button>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>2020.04.15</td>
-                                                                                    <td>Casual Leave</td>
-                                                                                    <td>2020.04.01</td>
-                                                                                    <td>2020.04.03</td>
-                                                                                    <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>2020.04.15</td>
-                                                                                    <td>Medical Leave</td>
-                                                                                    <td >2020.04.21</td>
-                                                                                    <td>2020.04.23</td>
-                                                                                    <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>2020.06.25</td>
-                                                                                    <td>Sick Leave</td>
-                                                                                    <td>2020.06.25</td>
-                                                                                    <td>2020.06.25</td>
-                                                                                    <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>2020.08.10</td>
-                                                                                    <td>Casual Leave</td>
-                                                                                    <td>2020.08.14</td>
-                                                                                    <td>2020.08.15</td>
-                                                                                    <td><span class="badge badge-danger">Rejected</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td >2020.09.25</td>
-                                                                                    <td>Annual Leave</td>
-                                                                                    <td >2020.09.16</td>
-                                                                                    <td>2020.09.18</td>
-                                                                                    <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
-                                                                                    </td>
-                                                                                </tr>
-
-                                                                                <tr>
-                                                                                    <td>2020.09.25</td>
-                                                                                    <td>Sick Leave</td>
-                                                                                    <td>2020.09.26</td>
-                                                                                    <td>2020.09.90</td>
-                                                                                    <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
-                                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="tab-pane py-0" id="tabs-2" role="tabpanel">
-                                                                    <div class="table-responsive table-hover">
-                                                                        {/* Employees History */}
-                                                                        <table class="table table-bordered table-hover">
+                                                                    <table class="table table-bordered table-hover">
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th className=" th-bold" scope="col">Date <span className="float-right sort-opacity"><i class="fa fa-sort" aria-hidden="true"></i></span></th>
@@ -219,7 +120,7 @@ export default function HR_LeaveHistory() {
                                                                                     <td >2020.03.26</td>
                                                                                     <td >2020.03.28</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm" data-toggle="modal" data-target="#view-emp-information">View</button>
                                                                                     </td>
                                                                                 </tr>
@@ -231,7 +132,7 @@ export default function HR_LeaveHistory() {
                                                                                     <td>2020.04.01</td>
                                                                                     <td>2020.04.03</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
@@ -243,7 +144,7 @@ export default function HR_LeaveHistory() {
                                                                                     <td >2020.04.21</td>
                                                                                     <td>2020.04.23</td>
                                                                                     <td><span class="badge badge-danger">Rejected</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
@@ -255,7 +156,7 @@ export default function HR_LeaveHistory() {
                                                                                     <td>2020.06.25</td>
                                                                                     <td>2020.06.25</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
@@ -267,7 +168,7 @@ export default function HR_LeaveHistory() {
                                                                                     <td>2020.08.14</td>
                                                                                     <td>2020.08.15</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
@@ -279,7 +180,7 @@ export default function HR_LeaveHistory() {
                                                                                     <td >2020.09.16</td>
                                                                                     <td>2020.09.18</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
@@ -291,13 +192,19 @@ export default function HR_LeaveHistory() {
                                                                                     <td>2020.09.26</td>
                                                                                     <td>2020.09.90</td>
                                                                                     <td><span class="badge badge-success">Approved</span></td>
-                                                                                    <td className = "text-center">
+                                                                                    <td className="text-center">
                                                                                         <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
+
                                                                     </div>
+                                                                </div>
+                                                                <div class="tab-pane py-0" id="tabs-2" role="tabpanel">
+                                                                    <div class="table-responsive table-hover">
+                                                                        {/* Employees History */}
+                                                                                                                                            </div>
                                                                 </div>
                                                             </div>
 

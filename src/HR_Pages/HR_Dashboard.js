@@ -18,11 +18,11 @@ const { RangePicker } = DatePicker;
 class HR_Dashboard extends Component {
     state = {
         size: 'default',
-      };
-    
-      handleSizeChange = e => {
+    };
+
+    handleSizeChange = e => {
         this.setState({ size: e.target.value });
-      };
+    };
 
     state = {
         date: new Date(),
@@ -74,13 +74,13 @@ class HR_Dashboard extends Component {
                                         <div class="card-body">
                                             <ul class="list-group">
                                                 <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/manage_employee"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
+                                                {/* <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li> */}
+                                                {/* <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li> */}
+                                                {/* <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/manage_employee"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li> */}
+                                                {/* <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Profile_details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li> */}
                                                 <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
                                                 <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                                {/* <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li> */}
                                             </ul>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ class HR_Dashboard extends Component {
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="row">
-                                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            {/* <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <div class="card dash-widget ctm-border-radius shadow-sm">
                                                     <div class="card-body">
                                                         <div class="card-icon bg-primary">
@@ -132,8 +132,8 @@ class HR_Dashboard extends Component {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+                                            </div> */}
+                                            {/* <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
                                                 <div class="card dash-widget ctm-border-radius shadow-sm">
                                                     <div class="card-body">
                                                         <div class="card-icon bg-success">
@@ -146,7 +146,7 @@ class HR_Dashboard extends Component {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
 
                                         <div class="card shadow-sm ctm-border-radius">
@@ -158,89 +158,75 @@ class HR_Dashboard extends Component {
 
                                         <div class="row">
                                             <div class="col-8">
-                                                <div class="card ctm-border-radius shadow-sm">
+                                                <div class="card ctm-border-radius shadow-sm flex-fill">
                                                     <div class="card-header">
-                                                        <h5 class="card-title mb-0 font-weight-normal">Apply Leaves</h5>
+                                                        <h5 class="card-title mb-0 font-weight-normal">Leave Request waiting For My Approval</h5>
                                                     </div>
                                                     <div class="card-body">
-                                                        <form>
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label>
-                                                                            Leave Type
-															<span class="text-danger">*</span>
-                                                                        </label>
-                                                                        <select class="form-control select">
-                                                                            <option>Select Leave</option>
-                                                                            <option>Casual Leave</option>
-                                                                            <option>Sick Leave</option>
-                                                                            <option>Half Day</option>
-                                                                            <option>Other Leave</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-
-                                                                {/* <div class="col-sm-6 leave-col">
-                                                                    <div class="form-group">
-                                                                        <label>Remaining Leaves</label>
-                                                                        <input type="text" class="form-control" placeholder="10" disabled />
-                                                                    </div>
-                                                                </div> */}
+                                                        <table class="table table-hover table-bordered table-sm">
+                                                            {/* <thead>
+                                                                <tr>
+                                                                    <th width="9%" scope="col">Name</th>
+                                                                    <th width="9%" scope="col">Leave Type</th>
+                                                                    <th width="17%" scope="col">From-To</th>
+                                                                    <th width="5%" scope="col">Action</th>
+                                                                </tr>
+                                                            </thead> */}
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Ravi Lavanjan</td>
+                                                                    <td>Casual Leave</td>
+                                                                    <td>2020.04.03 - 2020.04.05</td>
+                                                                    <td className="text-center">
+                                                                        <a href="/leave_action" class="btn btn-primary font-weight-bold view-btn btn-sm">View</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Linges Sivapiriyan</td>
+                                                                    <td>Sick Leave</td>
+                                                                    <td>2020.04.06 - 2020.04.08</td>
+                                                                    <td className="text-center">
+                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jeya Sathurya</td>
+                                                                    <td>Half Day</td>
+                                                                    <td>2020.04.08</td>
+                                                                    <td className="text-center">
+                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Sinthu Wamsan</td>
+                                                                    <td>Sick Leave</td>
+                                                                    <td>2020.04.08 - 2020.04.09</td>
+                                                                    <td className="text-center">
+                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Hritik Roshan</td>
+                                                                    <td>Casual Leave</td>
+                                                                    <td>2020.05.09 - 2020.05.12</td>
+                                                                    <td className="text-center">
+                                                                        <button type="button" class="btn btn-primary font-weight-bold view-btn btn-sm">View</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div className="row">
+                                                            <div className="col-8">
+                                                                <span className="ml-4 font-italic">Showing 1 to 5 of 15 new requests</span>
                                                             </div>
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label>Dates</label>
-                                                                        <RangePicker size={size} />
-                                                                        {/* <input type="text" class="form-control datetimepicker" /> */}
-                                                                    </div>
-                                                                </div>
-                                                                {/* <div class="col-sm-6 leave-col">
-                                                                    <div class="form-group">
-                                                                        <label>To</label>
-                                                                        <input type="text" class="form-control datetimepicker" />
-                                                                    </div>
-                                                                </div> */}
+                                                            <div className="col-4 justify-content-end">
+                                                                <a href="/leave_process"><span className="text-right">View more...</span></a>
                                                             </div>
-                                                            <div class="row">
-                                                                <div class="col-sm-6 leave-col">
-                                                                    <div class="form-group">
-                                                                        <label>Doctor Certificate </label>&nbsp;&nbsp;
-                                                                        <input type="radio" id="male" name="gender" value="male" />&nbsp;
-                                                                        <label for="male">Yes</label>&nbsp;&nbsp;
-                                                                        <input type="radio" id="male" name="gender" value="male" />&nbsp;
-                                                                        <label for="male">No</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="row">
-                                                                <div class="col-sm-6 leave-col">
-                                                                    <div class="input-group">
-                                                                        <div class="custom-file">
-                                                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                                                                aria-describedby="inputGroupFileAddon01" />
-                                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <br />
-                                                            <div class="row">
-                                                                <div class="col-sm-8">
-                                                                    <div class="form-group mb-0">
-                                                                        <label>Reason</label>
-                                                                        <textarea class="form-control" rows="4" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            {/* <div class="text-center">
-                                                                <a href="" class="btn btn-theme apply-leave text-white ctm-border-radius mt-4 mr-5" data-toggle="modal" data-target="#add-information">Apply</a>
-                                                                <a href="" class="btn cancel-leave text-white ctm-border-radius mt-4">Cancel</a>
-                                                            </div> */}
-                                                        </form>
+                                                        </div>
                                                     </div>
+
                                                 </div>
+
                                             </div>
 
                                             {/* <div className="col-4">
@@ -256,7 +242,7 @@ class HR_Dashboard extends Component {
                                             <div class="col-xl-4 col-lg-12 col-md-12">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
-                                                        
+
                                                         <Calendar
                                                             onChange={this.onChange}
                                                             value={this.state.date}
@@ -338,15 +324,15 @@ class HR_Dashboard extends Component {
                                                             </tbody>
                                                         </table>
                                                         <div className="row">
-                                                        <div className="col-8">
-                                                            <span className="ml-4 font-italic">Showing 1 to 5 of 15 new requests</span>
-                                                        </div>
-                                                        <div className="col-4 justify-content-end">
-                                                            <a href = "/leave_process"><span className = "text-right">View more...</span></a>
+                                                            <div className="col-8">
+                                                                <span className="ml-4 font-italic">Showing 1 to 5 of 15 new requests</span>
+                                                            </div>
+                                                            <div className="col-4 justify-content-end">
+                                                                <a href="/leave_process"><span className="text-right">View more...</span></a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    </div>
-                                                    
+
                                                 </div>
 
                                             </div>
@@ -378,36 +364,36 @@ class HR_Dashboard extends Component {
                                                         <h5 class="card-title mb-0 font-weight-normal">My Recent Leave Activities</h5>
                                                     </div>
                                                     {/* <div className="card-body"> */}
-                                                        <table class="table table-hover leave-action-table ">
+                                                    <table class="table table-hover leave-action-table ">
 
-                                                            <tbody>
-
-
-                                                                <tr>
-                                                                    <td width="50%" className="">2020.03.25 (Mon) to 2020.03.27 (Wed)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o text-dark" aria-hidden="true"></i>&nbsp;&nbsp; <i class="fa fa-trash text-danger" aria-hidden="true"></i> <br />Sick Leave</td>
-                                                                    <td>2days</td>
-                                                                    <td>Applied on 2020.03.24 13:45:19</td>
-                                                                    <td>Waiting For Approval</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td className="">2020.03.25 (Mon) to 2020.03.27 (Wed)<br />Sick Leave <br />Rejected By Alan Sathyathas (Manager at SGIC) on 2020.03.25</td>
-                                                                    <td>3days</td>
-                                                                    <td>Applied on 2020.03.24 13:45:19</td>
-                                                                    <td>Rejected</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td className="">2020.03.25 (Mon) to 2020.03.27 (Wed)<br />Sick Leave <br />Approved By Alan Sathyathas (Manager at SGIC) on 2020.03.24</td>
-                                                                    <td>1days</td>
-                                                                    <td>Applied on 2020.03.24 13:45:19</td>
-                                                                    <td>Approved</td>
-                                                                </tr>
+                                                        <tbody>
 
 
+                                                            <tr>
+                                                                <td width="50%" className="">2020.03.25 (Mon) to 2020.03.27 (Wed)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o text-dark" aria-hidden="true"></i>&nbsp;&nbsp; <i class="fa fa-trash text-danger" aria-hidden="true"></i> <br />Sick Leave</td>
+                                                                <td>2days</td>
+                                                                <td>Applied on 2020.03.24 13:45:19</td>
+                                                                <td>Waiting For Approval</td>
+                                                            </tr>
 
-                                                            </tbody>
-                                                        </table>
+                                                            <tr>
+                                                                <td className="">2020.03.25 (Mon) to 2020.03.27 (Wed)<br />Sick Leave <br />Rejected By Alan Sathyathas (Manager at SGIC) on 2020.03.25</td>
+                                                                <td>3days</td>
+                                                                <td>Applied on 2020.03.24 13:45:19</td>
+                                                                <td>Rejected</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td className="">2020.03.25 (Mon) to 2020.03.27 (Wed)<br />Sick Leave <br />Approved By Alan Sathyathas (Manager at SGIC) on 2020.03.24</td>
+                                                                <td>1days</td>
+                                                                <td>Applied on 2020.03.24 13:45:19</td>
+                                                                <td>Approved</td>
+                                                            </tr>
+
+
+
+                                                        </tbody>
+                                                    </table>
 
                                                     {/* </div> */}
 
@@ -483,25 +469,14 @@ class HR_Dashboard extends Component {
 
 
                     {/* New Team the modal */}
-                    <div class="modal fade" id="addNewType">
+                    <div class="modal fade" id="view_calendar">
                         <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title mb-3">Create New Date Type</h4>
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input class="form-control date-enter" type="text" placeholder="Date Type" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input class="form-control datetimepicker date-enter" type="text" placeholder="Key Date" />
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn btn-danger ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn text-white ctm-border-radius btn-theme  button-1 float-right">Add</button>
-                                </div>
+                            <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
+
+                                <Calendar
+                                    onChange={this.onChange}
+                                    value={this.state.date}
+                                />
                             </div>
                         </div>
                     </div>

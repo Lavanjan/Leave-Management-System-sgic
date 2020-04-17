@@ -66,14 +66,10 @@ class HR_LeaveProcess extends Component {
                                     <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                         <div class="card-body">
                                             <ul class="list-group">
-                                                <li class="mr-1 "><a class="btn-ctm-space  btn-dec" href="/"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Home</span></a></li>
-                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Process</span></a></li>
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/manage_employee"><span class="lnr lnr-users pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_details"><span class="lnr lnr-list pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Details</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_Settings"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
+                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Leave</span></a></li>
+                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Emplyee Leave History</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/leave_setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Settings</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -89,7 +85,7 @@ class HR_LeaveProcess extends Component {
                                             <div class="col-12">
                                                 <div class="card ctm-border-radius shadow-sm">
                                                     <div class="card-header">
-                                                        <h5 class="card-title mb-0 font-weight-normal">Leave Applications</h5>
+                                                        <h5 class="card-title mb-0 font-weight-normal">Leave Applications<span class="lnr lnr-calendar-full float-right" data-toggle="modal" data-target="#view_calendar"></span></h5>
                                                     </div>
                                                     <div className="row">
                                                         <div className="col-4">
@@ -285,6 +281,17 @@ class HR_LeaveProcess extends Component {
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="view_calendar">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
+
+                                <Calendar
+                                    onChange={this.onChange}
+                                    value={this.state.date}
+                                />
+                            </div>
+                        </div>
+                    </div>
             </Fragment>
         )
     }

@@ -66,10 +66,11 @@ class Leave_Settings extends Component {
 
                                     <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                         <div class="card-body">
-                                            <ul class="list-group">
-                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/settings"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">System</span></a></li>
-                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/leave_setting"><span class="lnr lnr-unlink pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Setting</span></a></li>
-                                                <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
+                                        <ul class="list-group">
+                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Leave</span></a></li>
+                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="#"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Emplyee Leave History</span></a></li>
+                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/leave_setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Settings</span></a></li>
                                             </ul>
                                         </div>
                                     </div>

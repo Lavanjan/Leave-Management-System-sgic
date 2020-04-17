@@ -217,11 +217,11 @@ function Navbar() {
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<li class="mr-1 active"><a href="/" class="btn-ctm-space text-white calen-btn"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">My Leave</span></a></li>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Dashboard"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">My Profile</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Profile_details"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">My Profile</span></a></li>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Dashboard"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Leave</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/leave_process"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Leave</span></a></li>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Dashboard"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
+										<li class="mr-1"><a class="btn-ctm-space btn-dec " href="/manage_employee"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employee</span></a></li>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/settings"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Configuration</span></a></li>
 

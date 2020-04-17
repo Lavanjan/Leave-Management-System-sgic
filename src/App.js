@@ -29,7 +29,7 @@ import HR_LeaveProcess from './HR_Pages/HR_LeaveProcess'
 import HR_LeaveHistory from './HR_Pages/HR_LeaveHistory'
 import HR_Settings from './HR_Pages/HR_Settings'
 import HR_ManageEmp from './HR_Pages/HR_ManageEmp'
-import HR_Details from './HR_Pages/HR_Details'
+import Profile_Details from './HR_Pages/Profile_Details'
 
 import Leave_Setting from './Admin_Pages/Leave_Settings'
 
@@ -50,13 +50,13 @@ class App extends Component{
 		</div>
     <Navabar/>
     <Switch>
-    <Route exact path ="/" component = {HR_Dashboard}/>
+    <Route exact path ="/HR_dashboard" component = {HR_Dashboard}/>
     <Route exact path = "/leave_action" component = { HR_LeaveAction }/>
     <Route exact path = "/leave_process" component = { HR_LeaveProcess }/>
     <Route exact path = "/HR_leave-history" component = { HR_LeaveHistory }/>
-    <Route exact path = "/HR_settings" component = { HR_Settings }/>
+    <Route exact path = "/Profile_settings" component = { HR_Settings }/>
     <Route exact path = "/manage_employee" component = { HR_ManageEmp }/>
-    <Route exact path = "/HR_details" component = { HR_Details }/>
+    <Route exact path = "/Profile_details" component = { Profile_Details }/>
 
     <Route exact path = "/leave_setting" component = { Leave_Setting }/>
 
@@ -77,7 +77,7 @@ class App extends Component{
       <Route exact path = "/Emp_LeaveHistory" component = { Emp_LeaveHistory }/>
       <Route exact path = "/Emp_Setting" component = { Emp_Setting }/>
       <Route exact path = "/View_LeaveDetails" component = { View_LeaveDetails }/>
-      <Route exact path = "/Emp_Dashboard" component = { Emp_Dashboard }/>
+      <Route exact path = "/" component = { Emp_Dashboard }/>
 
  
       

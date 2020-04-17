@@ -31,11 +31,14 @@ class Calender extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ctm-border-radius shadow-sm">
-                                        <div class="card-body">
-                                            <a href="javascript:void(0)" class="btn ctm-border-radius text-white btn-block btn-theme calen-btn" data-toggle="modal" data-target="#add_event"><span><i class="fe fe-plus"></i></span> Create New</a>
-                                        </div>
-                                    </div>
+                                    <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
+										<div class="card-body">
+										<ul class="list-group">
+                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/settings"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">System</span></a></li>
+                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn " href="/calendar"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Calendar</span></a></li>
+                                            </ul>
+										</div>
+									</div>
                                     <div class="card ctm-border-radius shadow-sm">
                                         <div class="card-body">
                                             <h4 class="card-title">Drag & Drop Event</h4>
