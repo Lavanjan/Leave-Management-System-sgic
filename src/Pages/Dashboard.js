@@ -57,8 +57,31 @@ function Dashboard() {
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
 										<li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_Setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Settings</span></a></li>
 									</ul>
+							<div class="user-card card shadow-sm bg-white text-center ctm-border-radius">
+								<div class="user-info card-body">
+									<div class="user-avatar mb-4">
+										<img src={manager_img} alt="User Avatar" class="img-fluid rounded-circle" width="100" />
+									</div>
+									<div class="user-details">
+										<h4><b>Welcome Mr. Raveen</b></h4>
+										<p>Sun, 29 Nov 2019</p>
+									</div>
 								</div>
 							</div>
+							<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {tiger} alt="image" class="img-fluid"/></span>
+										<span class="ml-4">Tiger shroff is working from home today.</span>
+									</div>
+							</div>
+								<div class="card shadow-sm ctm-border-radius">
+									<div class="card-body">
+										<span class="avatar" data-toggle="tooltip" data-placement="top" title="Jenni Sims"><img src= {hritik} alt="image" class="img-fluid"/></span>
+										<span class="ml-4">Hritik Roshan is away today.</span>
+									</div>
+									</div>
+								</div>
+								</div>
 						</aside>
 					</div>
 
@@ -142,10 +165,10 @@ function Dashboard() {
 										<table class="table table-bordered">
 											<thead>
 												<tr>
-													<th width="5%" scope="col">No</th>
-													<th width="20%" scope="col">Employee Name</th>
-													<th width="13%" scope="col">Leave Type</th>
-													<th width="17%" scope="col">From-To</th>
+													<th width = "5%" scope = "col">No</th>
+													<th width = "20%" scope = "col">Employee Name</th>
+													<th width = "13%" scope = "col">Leave Type</th>
+													<th width = "17%" scope = "col">From-To</th>
 													<th width="8%" scope="col">Status</th>
 													<th width="7%" scope="col">Action</th>
 												</tr>

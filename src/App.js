@@ -8,7 +8,7 @@ import Navabar from './Layouts/Navbar'
 import Dashboard from './Pages/Dashboard'
 import Leave from './Pages/Leave'
 import Department from './Pages/Department'
-import Calendar from './Pages/Calender'
+// import Calendar from './Pages/Calender'
 import Leave_Actoin from './Pages/Leave_Action'
 import Leave_ViewAll from './Pages/Leave_ViewAll'
 import Settings from './Pages/Settings'
@@ -34,6 +34,8 @@ import Profile_Details from './HR_Pages/Profile_Details'
 import Leave_Setting from './Admin_Pages/Leave_Settings'
 import LeaveAllocation from './HR_Pages/LeaveAllocation'
 import LuieLeave from './EmpPages/LuieLeave'
+import Calendar from './Pages/Calender'
+// import Leave_Actoin from './Pages/Leave_Action'
 
 
 class App extends Component{
@@ -86,6 +88,8 @@ class App extends Component{
 
  
       
+      <Route exact path = "/calendar" component = {Calendar}/>
+      <Route exact path = "/leave_action" component = {Leave_Actoin}/>
 {/* <Dashboard/>
 <Leave/> */}
     </Switch>
