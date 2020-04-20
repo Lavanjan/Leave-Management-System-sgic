@@ -14,7 +14,7 @@ import './../assets/css/style.css'
 
 const { RangePicker } = DatePicker;
 
-class Emp_Dashboard extends Component {
+class LuieLeave extends Component {
     state = {
         size: 'default',
       };
@@ -86,141 +86,32 @@ class Emp_Dashboard extends Component {
 
                             <div class="col-xl-9 col-lg-8  col-md-12">
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
-                                                <div class="card dash-widget ctm-border-radius shadow-sm">
-                                                    <div class="card-body">
-                                                        <div class="card-icon bg-primary">
-                                                            <i class="fa fa-signal" aria-hidden="true"></i>
-                                                        </div>
-                                                        <div class="card-right">
-                                                            <h4 class="card-title">Casual Leave</h4>
-                                                            <h4 class="card-title">Total : 3</h4>
-                                                            <h4 class="card-title">Available : 1</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
-                                                <div class="card dash-widget ctm-border-radius shadow-sm">
-                                                    <div class="card-body">
-                                                        <div class="card-icon bg-warning">
-                                                            <i class="fa fa-signal" aria-hidden="true"></i>
-                                                        </div>
-                                                        <div class="card-right">
-                                                            <h4 class="card-title">Sick Leave</h4>
-                                                            <h4 class="card-title">Total : 5</h4>
-                                                            <h4 class="card-title">Available : 2</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
-                                                <div class="card dash-widget ctm-border-radius shadow-sm">
-                                                    <div class="card-body">
-                                                        <div className="card-icon bg-danger">
-                                                            <i class="fa fa-signal" aria-hidden="true"></i>
-                                                        </div>
-                                                        <div class="card-right">
-                                                            <h4 class="card-title">Half Day</h4>
-                                                            <h4 class="card-title">Total : 3</h4>
-                                                            <h4 class="card-title">Available : 0</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
-                                                <div class="card dash-widget ctm-border-radius shadow-sm">
-                                                    <div class="card-body">
-                                                        <div class="card-icon bg-success">
-                                                            <i class="fa fa-signal" aria-hidden="true"></i>
-                                                        </div>
-                                                        <div class="card-right">
-                                                            <h4 class="card-title">Other Leave</h4>
-                                                            <h4 class="card-title">Total : 6</h4>
-                                                            <h4 class="card-title">Available : 2</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card shadow-sm ctm-border-radius">
-                                            <div class="card-body">
-                                                <span><i class="fa fa-bell text-warning" aria-hidden="true"></i></span>
-                                                <span class="ml-4">Your Leave Request has been accepted.</span>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-12">                                       
+                                       
 
                                         <div class="row">
                                             <div class="col-8">
                                                 <div class="card ctm-border-radius shadow-sm">
                                                     <div class="card-header">
-                                                        <h4 class="card-title mb-0">Apply Leaves</h4>
+                                                        <h4 class="card-title mb-0">Apply Luie Leave</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <form>
+                                                        <form>                                                            
                                                             <div class="row">
                                                                 <div class="col-sm-6">
                                                                     <div class="form-group">
-                                                                        <label>
-                                                                            Leave Type
-															<span class="text-danger">*</span>
-                                                                        </label>
-                                                                        <select class="form-control select">
-                                                                            <option>Select Leave</option>
-                                                                            <option>Casual Leave</option>
-                                                                            <option>Sick Leave</option>
-                                                                            <option>Half Day</option>
-                                                                            <option>Other Leave</option>
-                                                                        </select>
+                                                                        <label>Date</label>
+                                                                        <input type="date" class="form-control"></input>
                                                                     </div>
                                                                 </div>
-
-                                                                {/* <div class="col-sm-6 leave-col">
+                                                             <div class="col-sm-6 leave-col">
                                                                     <div class="form-group">
-                                                                        <label>Remaining Leaves</label>
-                                                                        <input type="text" class="form-control" placeholder="10" disabled />
+                                                                        <label>Hours</label>
+                                                                        <input type="number" class="form-control" />
                                                                     </div>
-                                                                </div> */}
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label>Dates</label>
-                                                                        <RangePicker size={size} />
-                                                                    </div>
-                                                                </div>
-                                                                {/* <div class="col-sm-6 leave-col">
-                                                                    <div class="form-group">
-                                                                        <label>To</label>
-                                                                        <input type="text" class="form-control datetimepicker" />
-                                                                    </div>
-                                                                </div> */}
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-sm-6 leave-col">
-                                                                    <div class="form-group">
-                                                                        <label>Doctor Certificate </label>&nbsp;&nbsp;
-                                                                        <input type="radio" id="male" name="gender" value="male" />&nbsp;
-                                                                        <label for="male">Yes</label>&nbsp;&nbsp;
-                                                                        <input type="radio" id="male" name="gender" value="male" />&nbsp;
-                                                                        <label for="male">No</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="row">
-                                                                <div class="col-sm-6 leave-col">
-                                                                    <div class="input-group">
-                                                                        <div class="custom-file">
-                                                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                                                                aria-describedby="inputGroupFileAddon01" />
-                                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            </div> 
+                                                            </div>                                                        
+                                                            
                                                             <br />
                                                             <div class="row">
                                                                 <div class="col-sm-8">
@@ -230,25 +121,14 @@ class Emp_Dashboard extends Component {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            {/* <div class="text-center">
+                                                             <div class="text-center">
                                                                 <a href="" class="btn btn-theme apply-leave text-white ctm-border-radius mt-4 mr-5" data-toggle="modal" data-target="#add-information">Apply</a>
                                                                 <a href="" class="btn cancel-leave text-white ctm-border-radius mt-4">Cancel</a>
-                                                            </div> */}
+                                                            </div> 
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            {/* <div className="col-4">
-                                                <Calendar
-                                                    onChange={this.onChange}
-                                                    value={this.state.date}
-                                                />
-                                            </div> */}
-
-
-
-
                                             <div class="col-xl-4 col-lg-12 col-md-12">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
@@ -299,7 +179,7 @@ class Emp_Dashboard extends Component {
                                                 /> */}
                                                 <div class="card ctm-border-radius shadow-sm">
                                                     <div class="card-header">
-                                                        <h5 class="card-title mb-0 font-weight-normal">My Recent Leave Activities</h5>
+                                                        <h5 class="card-title mb-0 font-weight-normal">My Recent Luie Activities</h5>
                                                     </div>
                                                     <table class="table table-hover leave-action-table table-sm">
 
@@ -307,23 +187,23 @@ class Emp_Dashboard extends Component {
 
 
                                                             <tr>
-                                                                <td width="50%" className="">2020.03.25 (Mon) to 2020.03.27 (Wed)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o text-primary" aria-hidden="true"></i>&nbsp;&nbsp; <i class="fa fa-trash text-danger" aria-hidden="true"></i> <br />Sick Leave</td>
-                                                                <td>2days</td>
+                                                                <td width="50%" className="">2020.03.25 (Mon) 13:45:19 PM - 16:45:19 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o text-primary" aria-hidden="true"></i>&nbsp;&nbsp; <i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+                                                                <td>2hours</td>
                                                                 <td>Applied on 2020.03.24 13:45:19</td>
                                                                 <td>Waiting For Approval</td>
                                                             </tr>
 
                                                             <tr>
-                                                                <td className="">2020.03.25 (Mon) to 2020.03.27 (Wed)<br />Sick Leave <br />Rejected By Alan Sathyathas (Manager at SGIC) on 2020.03.25</td>
-                                                                <td>3days</td>
-                                                                <td>Applied on 2020.03.24 13:45:19</td>
-                                                                <td>Rejected</td>
+                                                                <td className="">2020.03.25 (Mon) 13:45:19 PM - 16:45:19 PM</td>
+                                                                <td>3hours</td>
+                                                                <td>Applied on 2020.03.24 16:55:19</td>
+                                                                <td>Approved</td>
                                                             </tr>
 
                                                             <tr>
-                                                                <td className="">2020.03.25 (Mon) to 2020.03.27 (Wed)<br />Sick Leave <br />Approved By Alan Sathyathas (Manager at SGIC) on 2020.03.24</td>
-                                                                <td>1days</td>
-                                                                <td>Applied on 2020.03.24 13:45:19</td>
+                                                                <td className="">2020.13.25 (Mon) 10:45:19 PM - 12:45:19 PM</td>
+                                                                <td>2hours</td>
+                                                                <td>Applied on 2020.13.24 12:55:19</td>
                                                                 <td>Approved</td>
                                                             </tr>
 
@@ -611,4 +491,4 @@ class Emp_Dashboard extends Component {
         )
     }
 }
-export default Emp_Dashboard
+export default LuieLeave

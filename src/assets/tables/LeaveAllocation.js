@@ -5,10 +5,10 @@ import Accounts_Table from '../assets/tables/Accounts_Table'
 import Development_Table from './../assets/tables/Development_Table'
 import HR_Table from './../assets/tables/HR_Table'
 import QA_Table from './../assets/tables/QA_Tables'
+import All_table from './../assets/tables/All_Table'
 
 
-
-function HR_ManageEmp() {
+function LeaveAllocation() {
     let { path, url } = useRouteMatch();
     return (
         <Router>
@@ -25,9 +25,9 @@ function HR_ManageEmp() {
                                                     <div class="custom-breadcrumb">
                                                         <ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
                                                             <li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">SGIC</a></li>
-                                                            <li class="breadcrumb-item d-inline-block active">Human Resource</li>
+                                                            <li class="breadcrumb-item d-inline-block active">Manage Leave</li>
                                                         </ol>
-                                                        <h4 class="text-dark">Manage Employees</h4>
+                                                        <h4 class="text-dark">Leave Allocaion</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -37,7 +37,10 @@ function HR_ManageEmp() {
                                 <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
                                         <div class="card-body">
                                             <ul class="list-group">
-                                                <li class="mr-1 "><a class="btn-ctm-space text-white calen-btn" href="/manage_employee"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Employees</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_process"><span class="lnr lnr-hourglass pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Manage Leave</span></a></li>
+                                            <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/leave_allocation"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Allocaion</span></a></li>
+                                            <li class="mr-1 active"><a class="btn-ctm-space btn-dec text-white calen-btn" href="/HR_leave-history"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Emplyee Leave History</span></a></li>
+                                            <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/leave_setting"><span class="lnr lnr-cog pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave Settings</span></a></li>
                  
                                             </ul>
                                         </div>
@@ -114,7 +117,7 @@ function HR_ManageEmp() {
                                 <div class="col-md-6 col-xl-12 col-lg-6 d-flex">
                                     <Switch>
                                         <Route exact path={path}>
-                                            <Development_Table/>
+                                            <All_table />
                                         </Route>
                                         <Route path={`${path}/development_table`}>
                                             <Development_Table />
@@ -140,4 +143,4 @@ function HR_ManageEmp() {
     );
 }
 
-export default HR_ManageEmp
+export default LeaveAllocation

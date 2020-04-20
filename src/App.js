@@ -32,6 +32,8 @@ import HR_ManageEmp from './HR_Pages/HR_ManageEmp'
 import Profile_Details from './HR_Pages/Profile_Details'
 
 import Leave_Setting from './Admin_Pages/Leave_Settings'
+import LeaveAllocation from './HR_Pages/LeaveAllocation'
+import LuieLeave from './EmpPages/LuieLeave'
 
 
 class App extends Component{
@@ -78,6 +80,9 @@ class App extends Component{
       <Route exact path = "/Emp_Setting" component = { Emp_Setting }/>
       <Route exact path = "/View_LeaveDetails" component = { View_LeaveDetails }/>
       <Route exact path = "/" component = { Emp_Dashboard }/>
+      leave_allocation
+      <Route exact path = "/leave_allocation" component = {LeaveAllocation} />
+      <Route exact path ="/luie-leave" component={LuieLeave}/>
 
  
       
