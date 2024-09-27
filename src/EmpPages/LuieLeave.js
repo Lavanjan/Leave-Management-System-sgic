@@ -1,0 +1,494 @@
+import React, { Fragment, Component } from 'react'
+import Calendar from 'react-calendar'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import '@fullcalendar/core/main.css';
+import '@fullcalendar/daygrid/main.css';
+import { NotificationContainer, NotificaionManager } from 'react-notifications'
+
+import { DatePicker } from 'antd';
+
+
+import './../assets/css/style.css'
+// import 'react-notifications/lib/Notification.css'
+
+const { RangePicker } = DatePicker;
+
+class LuieLeave extends Component {
+    state = {
+        size: 'default',
+      };
+    
+      handleSizeChange = e => {
+        this.setState({ size: e.target.value });
+      };
+
+    state = {
+        date: new Date(),
+    }
+    onChange = date => this.setState({ date });
+
+    createNotification = (type) => {
+        return () => {
+            switch (type) {
+                case 'success':
+                    NotificaionManager.success('Success Message', 'Title Here');
+                    break;
+                case 'info':
+                    NotificaionManager.info('Info Message');
+                    break;
+            }
+        };
+    };
+
+
+    render() {
+        const { size } = this.state;
+        return (
+            <Fragment>
+                <div class="page-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class=" col-xl-3 col-lg-4 col-md-12 theiaStickySidebar">
+                                <aside class="sidebar sidebar-user">
+                                    <div class="card ctm-border-radius shadow-sm">
+                                        <div class="card-body py-4">
+                                            <div class="row">
+                                                <div class="col-md-12 mr-auto text-left">
+                                                    <div class="custom-search input-group">
+                                                        <div class="custom-breadcrumb">
+                                                            <ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
+                                                                <li class="breadcrumb-item d-inline-block"><a href="/" class="text-dark">Home</a></li>
+                                                                <li class="breadcrumb-item d-inline-block active">Employee</li>
+                                                            </ol>
+                                                            <h4 class="text-dark">Profile</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card">
+                                        <div class="card-body">
+                                            <ul class="list-group">
+                                                <li class="mr-1 active"><a class="btn-ctm-space text-white calen-btn" href="/Emp_Dashboard"><span class="lnr lnr-home pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Apply Leave</span></a></li>
+                                                <li class="mr-1 "><a class="btn-ctm-space btn-dec" href="/luie-leave"><span class="lnr lnr-license pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Lieu Leave</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec " href="/Emp_Holiday"><span class="lnr lnr-apartment pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Public Holidays</span></a></li>
+                                                <li class="mr-1"><a class="btn-ctm-space btn-dec" href="/Emp_LeaveHistory"><span class="lnr lnr-briefcase pr-0 pr-lg-2"></span><span class="d-none d-lg-inline">Leave History</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-xl-9 col-lg-8  col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">                                       
+                                       
+
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="card ctm-border-radius shadow-sm">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title mb-0">Apply Luie Leave</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <form>                                                            
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label>Date</label>
+                                                                        <input type="date" class="form-control"></input>
+                                                                    </div>
+                                                                </div>
+                                                             <div class="col-sm-6 leave-col">
+                                                                    <div class="form-group">
+                                                                        <label>Hours</label>
+                                                                        <input type="number" class="form-control" />
+                                                                    </div>
+                                                            </div> 
+                                                            </div>                                                        
+                                                            
+                                                            <br />
+                                                            <div class="row">
+                                                                <div class="col-sm-8">
+                                                                    <div class="form-group mb-0">
+                                                                        <label>Reason</label>
+                                                                        <textarea class="form-control" rows="4" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                             <div class="text-center">
+                                                                <a href="" class="btn btn-theme apply-leave text-white ctm-border-radius mt-4 mr-5" data-toggle="modal" data-target="#add-information">Apply</a>
+                                                                <a href="" class="btn cancel-leave text-white ctm-border-radius mt-4">Cancel</a>
+                                                            </div> 
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-12 col-md-12">
+                                                <div class="row">
+                                                    <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
+                                                        <Calendar
+                                                            onChange={this.onChange}
+                                                            value={this.state.date}
+                                                        />
+                                                    </div>
+
+                                                    <div class="col-xl-12 col-lg-6 col-md-6 d-flex mt-4">
+                                                        <div class="card bg-none mb-3" style={{ width: "19rem" }}>
+                                                            {/* <div class="card-header">Events Happening During this period</div> */}
+                                                            <div class="card-body" style={{ height: "7rem" }}>
+                                                                <span><i class="fa fa-calendar fa-size" aria-hidden="true"></i></span>
+                                                            </div>
+                                                            <h6 className="text-center font-weight-normal">No events happening<br /> during this period</h6>
+                                                            <p className="font-italic text-center  small">Public holidays, shifts etc. will be shown here.</p>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+                                        </div>
+
+
+                                        {/* <div class="card shadow-sm ctm-border-radius">
+                                            <div class="alert alert-light" role="alert">
+                                                <h4 class="alert-heading">Discussion!</h4>
+                                                <p className="text-dark">Leave Approvals HritikRoshan (Sick Leave From 2020.03.25 to 2020.03.29) <br /><i class="fa fa-exclamation-circle text-warning" aria-hidden="true"></i> &nbsp;Please Attach the docto's certificate</p>
+                                                <p class="mb-0 font-italic text-dark">Message from Alan Sathyathas (Manager at SGIC)</p>
+                                            </div>
+                                        </div> */}
+
+                                        <div className="row">
+                                            <div className="remain-leave-table col-12">
+                                                {/* <Calendar
+                                                    onChange={this.onChange}
+                                                    value={this.state.date}
+                                                /> */}
+                                                <div class="card ctm-border-radius shadow-sm">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title mb-0 font-weight-normal">My Recent Luie Activities</h5>
+                                                    </div>
+                                                    <table class="table table-hover leave-action-table table-sm">
+
+                                                        <tbody>
+
+
+                                                            <tr>
+                                                                <td width="50%" className="">2020.03.25 (Mon) 13:45:19 PM - 16:45:19 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square-o text-primary" aria-hidden="true"></i>&nbsp;&nbsp; <i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+                                                                <td>2hours</td>
+                                                                <td>Applied on 2020.03.24 13:45:19</td>
+                                                                <td>Waiting For Approval</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td className="">2020.03.25 (Mon) 13:45:19 PM - 16:45:19 PM</td>
+                                                                <td>3hours</td>
+                                                                <td>Applied on 2020.03.24 16:55:19</td>
+                                                                <td>Approved</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td className="">2020.13.25 (Mon) 10:45:19 PM - 12:45:19 PM</td>
+                                                                <td>2hours</td>
+                                                                <td>Applied on 2020.13.24 12:55:19</td>
+                                                                <td>Approved</td>
+                                                            </tr>
+
+
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    {/* Confirm Leave */}
+
+                    <div class="modal fade" id="add-information" role="document">
+                        <div class="modal-dialog modal-lg modal-top modal-full-height ">
+                            <div class="modal-content">
+                                <div class="modal-body style-add-modal">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Confirm Leave For - Sick Leave</h4>
+                                    <div class="row">
+                                        <table class="table table-borderless leave-action-table">
+
+                                            <tbody>
+
+                                                <tr>
+                                                    <td width="20%" className="bold-let">Sick Leave </td>
+                                                    <td colSpan="3">2020.04.26 (Fri) to 2020.04.29 (Mon)</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td className="bold-let">Leave Duration :  </td>
+                                                    <td width="30%">2 Days</td>
+                                                    <td width="20%" className="bold-let">Calendar Days :  </td>
+                                                    <td>4 Days</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td className="bold-let">Reason : </td>
+                                                    <td colspan="5">Writers write descriptive paragraphs because their purpose is to describe something. Their point is that something is beautiful or disgusting or strangely intriguing.</td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td colSpan="4">
+                                                        <div class="alert alert-info">
+                                                            <strong>Warning!</strong> Supporting document required to be attached as the leave duration exceeds 1 days.
+                                                            </div>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <NotificationContainer />
+                                    <button type="button" className="btn btn-info text-white ctm-border-radius float-right mt-0 mr-5" data-dismiss="modal" onClick={this.createNotification('success')}>Back</button>
+                                    <button type="button" className="btn btn-warning text-white ctm-border-radius float-right  mr-4" data-dismiss="modal">Confirm</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    {/* New Team the modal */}
+                    <div class="modal fade" id="addNewType">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Create New Date Type</h4>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input class="form-control date-enter" type="text" placeholder="Date Type" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input class="form-control datetimepicker date-enter" type="text" placeholder="Key Date" />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-danger ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn text-white ctm-border-radius btn-theme  button-1 float-right">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Add basic info modal */}
+                    <div class="modal fade" id="add_basicInformation">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Basic Information</h4>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Preferred Name" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="First Name" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Last Name" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Nationality" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Add Date of Birth" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Gender" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Blood Group" />
+                                    </div>
+                                    <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Edit basic Infor mation modal */}
+                    <div class="modal fade" id="edit_basicInformation">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Edit Basic Information</h4>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Preferred Name" value="Maria" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="First Name" value="Maria" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="Cotton" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Nationality" value="American" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control datetimepicker date-enter" type="text" placeholder="Add Date of Birth" value="05-07-1990" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Gender" value="Female" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Blood Group" value="A+" />
+                                    </div>
+                                    <button type="button" class="btn btn-danger float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Edit Contact the Modal */}
+                    <div class="modal fade" id="edit_Contact">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Edit Contact</h4>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Phone Number" value="987654321" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" placeholder="Login Email" value="mariacotton@example.com" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" placeholder="Add Personal Email" value="maria@example.com" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Seconary Phone Number" value="986754231" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Web Site" value="www.focustechnology.com" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Connect Your Linkedin" value="#mariacotton" />
+                                    </div>
+                                    <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Add contact the modal */}
+                    <div class="modal fade" id="add_Contact">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Add Contact</h4>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Phone Number" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" placeholder="Login Email" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" placeholder="Add Personal Email" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Seconary Phone Number" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add Web Site" />
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Connect Your Linkedin" />
+                                    </div>
+                                    <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Add a key date modal */}
+                    <div class="modal fade" id="addKeyDate">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Add New Date</h4>
+                                    <div class="form-group">
+                                        <div class="input-group mb-1">
+                                            <input class="form-control datetimepicker date-enter" type="text" placeholder="Date Type" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input class="form-control datetimepicker date-enter" type="text" placeholder="Key Date" />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Edit Date Modal */}
+                    <div class="modal fade" id="edit_Dates">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title mb-3">Edit Date</h4>
+                                    <div class="form-group">
+                                        <div class="input-group mb-1">
+                                            <input class="form-control datetimepicker date-enter" type="text" placeholder="Start Date" value="06-07-2017" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input class="form-control datetimepicker date-enter" type="text" placeholder="Visa Expiry Date" value="06 -07-2020" />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-danger text-white ctm-border-radius float-right ml-3" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-theme  button-1 text-white ctm-border-radius float-right">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Fragment>
+        )
+    }
+}
+export default LuieLeave
